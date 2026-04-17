@@ -1,0 +1,1002 @@
+[
+  {
+    "id": 1,
+    "category": "платы",
+    "name": "Asus PRIME B650-PLUS WIFI",
+    "price": 14799,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://mediawebimg.asus.com/files/media/d1b30d89-702a-48a2-9947-d2191d7dac0f/img/new_product_imgs/03_Performance/Storage/pic_M.2.png"
+  },
+  {
+    "id": 2,
+    "category": "платы",
+    "name": "MSI B650 GAMING PLUS WIFI",
+    "price": 15724,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/B650/B650-GAMING-PLUS-WIFI/b650-gaming-plus-wifi-hero-block01.png"
+  },
+  {
+    "id": 3,
+    "category": "платы",
+    "name": "MSI MAG B650 TOMAHAWK WIFI",
+    "price": 17521,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://asset-us-store.msi.com/image/cache/catalog/Pd_page/Motherboard/B650TOMAHAWKWIFI/B650TOMAHAWKWIFI-2-400x400.png"
+  },
+  {
+    "id": 4,
+    "category": "платы",
+    "name": "Gigabyte X870E AORUS ELITE WIFI7",
+    "price": 30091,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/3763/innergigabyte/images/product/summary.png"
+  },
+  {
+    "id": 5,
+    "category": "платы",
+    "name": "Asus PRIME B550M-A WIFI II",
+    "price": 9249,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/97/33/LD0005973392.jpg"
+  },
+  {
+    "id": 6,
+    "category": "платы",
+    "name": "Gigabyte B650 EAGLE AX",
+    "price": 14614,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://www.computeralliance.com.au/InventoryImages/42228.jpg"
+  },
+  {
+    "id": 7,
+    "category": "платы",
+    "name": "Asus TUF GAMING B850-PLUS WIFI",
+    "price": 20164,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/f46f4804-21d2-419a-8119-c3998da9674d/V1/img/performance/connectivity.webp"
+  },
+  {
+    "id": 8,
+    "category": "платы",
+    "name": "ASRock B650M Pro RS WiFi",
+    "price": 12949,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 256,
+    "imageUrl": "https://www.asrock.com/mb/photo/B650M+Pro+RS+WiFi(L3).png"
+  },
+  {
+    "id": 9,
+    "category": "платы",
+    "name": "MSI MAG X870 TOMAHAWK WIFI",
+    "price": 24974,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/X870/MAG-x870-Tomahawk-wifi/features/hero/msi-x870-tomahawk-wifi-hero-02.png"
+  },
+  {
+    "id": 10,
+    "category": "платы",
+    "name": "Gigabyte A520M K V2",
+    "price": 6333,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 64,
+    "imageUrl": "https://axa.com.ar/webaxa/29158/motherboard-gigabyte-a520m-k-v2-am4-m2-pcie-30-amd-ryzen-5000-series.jpg"
+  },
+  {
+    "id": 11,
+    "category": "платы",
+    "name": "Asus B650E MAX GAMING WIFI W",
+    "price": 13874,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/2fb644d0-cf3e-4356-8e0f-2fb3c8914421/w692"
+  },
+  {
+    "id": 12,
+    "category": "платы",
+    "name": "MSI PRO B650-S WIFI",
+    "price": 12579,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/B650/PRO-B650-S-WIFI/kv.png"
+  },
+  {
+    "id": 13,
+    "category": "платы",
+    "name": "Gigabyte B550M K",
+    "price": 9249,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://www.gigabyte.com/Image/88d14969cf7d2a4af7cbaa5c5bfb9819/ProductRemoveBg/35428"
+  },
+  {
+    "id": 14,
+    "category": "платы",
+    "name": "ASRock B850I Lightning WiFi",
+    "price": 23443,
+    "socket": "AM5",
+    "form_factor": "Mini ITX",
+    "max_memory": 128,
+    "imageUrl": "https://pg.asrock.com/mb/photo/B850I+Lightning+WiFi(L2).png"
+  },
+  {
+    "id": 15,
+    "category": "платы",
+    "name": "MSI B760 GAMING PLUS WIFI",
+    "price": 15724,
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/apluscontent/feature/1681977860.jpeg"
+  },
+  {
+    "id": 16,
+    "category": "платы",
+    "name": "MSI PRO B550M-VC WIFI",
+    "price": 9249,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://m.media-amazon.com/images/I/71Mumt38AtL._AC_SL1280_.jpg"
+  },
+  {
+    "id": 17,
+    "category": "платы",
+    "name": "MSI PRO Z790-A MAX WIFI",
+    "price": 20350,
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://m.media-amazon.com/images/I/81PagkRvhwL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 18,
+    "category": "платы",
+    "name": "Asus TUF GAMING B650-PLUS WIFI",
+    "price": 14799,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/d52e1dd0-6b0b-4c62-a625-01c5e41a8b07/w800"
+  },
+  {
+    "id": 19,
+    "category": "платы",
+    "name": "Gigabyte X870 EAGLE WIFI7",
+    "price": 21274,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/17/43/LD0006174388.jpg"
+  },
+  {
+    "id": 20,
+    "category": "платы",
+    "name": "Gigabyte X870 AORUS ELITE WIFI7 ICE",
+    "price": 27749,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/16/30/LD0006163003.jpg"
+  },
+  {
+    "id": 21,
+    "category": "платы",
+    "name": "MSI B550M PRO-VDH WIFI",
+    "price": 10174,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://media.gamestop.com/i/gamestop/11136644_ALT03/MSI-B550M-PRO-VDH-WiFi-Gaming-Motherboard"
+  },
+  {
+    "id": 22,
+    "category": "платы",
+    "name": "Asus ROG STRIX X870E-E GAMING WIFI",
+    "price": 44216,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/c90a2a18-b20d-4a21-9bbf-d4723b7a144e/v1/img/spec/cooling.png"
+  },
+  {
+    "id": 23,
+    "category": "платы",
+    "name": "ASRock B850M-X WiFi R2.0",
+    "price": 12024,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://www.asrock.com/mb/photo/B850M-X+WiFi+R2.0(L3).png"
+  },
+  {
+    "id": 24,
+    "category": "платы",
+    "name": "Gigabyte B850 EAGLE WIFI6E",
+    "price": 16649,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/20/14/LD0006201492.jpg"
+  },
+  {
+    "id": 25,
+    "category": "платы",
+    "name": "MSI MAG B850 TOMAHAWK MAX WIFI",
+    "price": 20349,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_1736159752859b0d59d04f539fee0f53b5742d9275.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+  },
+  {
+    "id": 26,
+    "category": "платы",
+    "name": "Gigabyte B760M GAMING PLUS WIFI DDR4",
+    "price": 12903,
+    "socket": "LGA1700",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://m.media-amazon.com/images/I/81pSTc-GhVL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 27,
+    "category": "платы",
+    "name": "Asus ROG STRIX B650-A GAMING WIFI",
+    "price": 15258,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/3151EBBB-8450-43F6-9994-D7E5E6A9D0E5/v1/img/kv/ROG-Strix-B650-A-Gaming.png"
+  },
+  {
+    "id": 28,
+    "category": "платы",
+    "name": "Gigabyte B650M GAMING PLUS WIFI",
+    "price": 14794,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 192,
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/3660/innergigabyteimages/kf-img.png"
+  },
+  {
+    "id": 29,
+    "category": "платы",
+    "name": "MSI MAG B550 TOMAHAWK MAX WIFI",
+    "price": 15724,
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://m.media-amazon.com/images/I/91jlwr0FGbL.jpg"
+  },
+  {
+    "id": 30,
+    "category": "платы",
+    "name": "Gigabyte B850 AORUS ELITE WIFI7",
+    "price": 21522,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/20/12/LD0006201299.jpg"
+  },
+  {
+    "id": 31,
+    "category": "платы",
+    "name": "Gigabyte B650 GAMING X AX V2",
+    "price": 17065,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/3566/innergigabyteimages/kf-img.png"
+  },
+  {
+    "id": 32,
+    "category": "платы",
+    "name": "Asus ROG STRIX X870-A GAMING WIFI",
+    "price": 29507,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/16/57/LD0006165722.jpg"
+  },
+  {
+    "id": 33,
+    "category": "платы",
+    "name": "ASRock A620I LIGHTNING WIFI",
+    "price": 14799,
+    "socket": "AM5",
+    "form_factor": "Mini ITX",
+    "max_memory": 96,
+    "imageUrl": "https://www.quietpc.com/images/products/asrock-a620i-lightning-wifi-box-large.jpg"
+  },
+  {
+    "id": 34,
+    "category": "платы",
+    "name": "Asus TUF GAMING B550-PLUS WIFI II",
+    "price": 13782,
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/194ef7df-2785-4486-8c91-eaaed7a0604a/w800"
+  },
+  {
+    "id": 35,
+    "category": "платы",
+    "name": "Asus TUF GAMING B650-E WIFI",
+    "price": 18499,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/be88749c-b61d-4f9f-b52f-558eae917aae/"
+  },
+  {
+    "id": 36,
+    "category": "платы",
+    "name": "Gigabyte Z790 EAGLE AX",
+    "price": 15724,
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://www.bhphotovideo.com/images/images1500x1500/gigabyte_z790_eagle_ax_motherboard_1812260.jpg"
+  },
+  {
+    "id": 37,
+    "category": "платы",
+    "name": "MSI B450M-A PRO MAX II",
+    "price": 8981,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 64,
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_168906722589f312de1ee2df6ec992a34277edb56e.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+  },
+  {
+    "id": 38,
+    "category": "платы",
+    "name": "MSI PRO B650M-P",
+    "price": 13874,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 192,
+    "imageUrl": "https://fabritec.pe/assets/media/producto/1708-MOTHERBOARD-MSI-PRO-B650M-P-(-PRO-B650M-P-).jpg"
+  },
+  {
+    "id": 39,
+    "category": "платы",
+    "name": "ASRock B450M/ac R2.0",
+    "price": 6937,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://www.asrock.com/mb/photo/B450Mac+R2.0(L4).png"
+  },
+  {
+    "id": 40,
+    "category": "платы",
+    "name": "Asus TUF GAMING B850M-PLUS WIFI",
+    "price": 20349,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/c002c3dc-b089-41bd-a022-475addbd7f74/V1/img/kv/kv-main.webp"
+  },
+  {
+    "id": 41,
+    "category": "платы",
+    "name": "ASRock B450M-HDV R4.0",
+    "price": 6473,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 64,
+    "imageUrl": "https://motherboarddb.com/media/images/Asrock/B450M-HDV+R4.0/B450M-HDV_R4.0-1.png"
+  },
+  {
+    "id": 42,
+    "category": "платы",
+    "name": "Gigabyte B850 AORUS ELITE WIFI7 ICE",
+    "price": 22199,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/20/13/LD0006201349.jpg"
+  },
+  {
+    "id": 43,
+    "category": "платы",
+    "name": "MSI PRO B760M-P DDR4",
+    "price": 9249,
+    "socket": "LGA1700",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_167273674400345d318e2f398cfc3c8a4def861321.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+  },
+  {
+    "id": 44,
+    "category": "платы",
+    "name": "Asus ROG STRIX B550-F GAMING WIFI II",
+    "price": 15724,
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/A9730D0E-D1A6-40C1-9282-F1BA1B13BFB4/v1/img/spec/performance_m.jpg"
+  },
+  {
+    "id": 45,
+    "category": "платы",
+    "name": "Gigabyte B850M GAMING X WIFI6E",
+    "price": 14799,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/bo/images/fiches/carte-mere/Gigabyte/b850/gigabyte_b850m_gaming_x_wifi6e.jpg"
+  },
+  {
+    "id": 46,
+    "category": "платы",
+    "name": "Asus ROG CROSSHAIR X870E HERO",
+    "price": 60124,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/5ee5a743-2fc2-44ae-abf4-208315a03a0b/v1/img/kv/pd.png"
+  },
+  {
+    "id": 47,
+    "category": "платы",
+    "name": "Gigabyte A520I AC",
+    "price": 9249,
+    "socket": "AM4",
+    "form_factor": "Mini ITX",
+    "max_memory": 64,
+    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/cdcbe06346078ee4cacaa3ba71a2f08c/Product/25811"
+  },
+  {
+    "id": 48,
+    "category": "платы",
+    "name": "Gigabyte B550M AORUS ELITE AX",
+    "price": 13874,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://www.vedantcomputers.com/image/cache/catalog/assets/product/gigabyte/motherboard/b550m-aorus-elite-ax/b550m-aorus-elite-ax-1-1000x1000.JPG"
+  },
+  {
+    "id": 49,
+    "category": "платы",
+    "name": "ASRock B850M Pro-A WiFi",
+    "price": 13041,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 256,
+    "imageUrl": "https://www.asrock.com/mb/photo/B850M+Pro-A+WiFi(L1).png"
+  },
+  {
+    "id": 50,
+    "category": "платы",
+    "name": "ASRock B650M PG Lightning Wifi",
+    "price": 17729,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 256,
+    "imageUrl": "https://pg.asrock.com/mb/photo/B650M+PG+Lightning+WiFi(L3).png"
+  },
+  {
+    "id": 51,
+    "category": "платы",
+    "name": "MSI MPG B550 GAMING PLUS",
+    "price": 9712,
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/B550/MPG/gaming-plus/msi-mpg-b550-gaming-plus-hero-02.png"
+  },
+  {
+    "id": 52,
+    "category": "платы",
+    "name": "MSI A520M-A PRO",
+    "price": 6255,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 64,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/73/67/LD0005736783_1.jpg"
+  },
+  {
+    "id": 53,
+    "category": "платы",
+    "name": "MSI PRO B650M-A WIFI",
+    "price": 13504,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 192,
+    "imageUrl": "https://m.media-amazon.com/images/I/81UCyHa+BKL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 54,
+    "category": "платы",
+    "name": "Asus ROG STRIX B650E-F GAMING WIFI",
+    "price": 23518,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/398D9060-E4B9-4A5E-B3AC-53FE4DC9144E/v1/img/spec/connectivity.png"
+  },
+  {
+    "id": 55,
+    "category": "платы",
+    "name": "Asus ROG STRIX B850-A GAMING WIFI",
+    "price": 22108,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/d6a08c43-8d58-4fc9-9e7d-54031d07acb5/v1/img/kv/pd.png"
+  },
+  {
+    "id": 56,
+    "category": "платы",
+    "name": "ASRock B550M Pro4",
+    "price": 9249,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 128,
+    "imageUrl": "https://www.motherboarddb.com/media/images/Asrock/B550M+Pro4/B550M_Pro4-3.png"
+  },
+  {
+    "id": 57,
+    "category": "платы",
+    "name": "MSI MAG X670E TOMAHAWK WIFI",
+    "price": 23006,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://www.bhphotovideo.com/images/images2500x2500/msi_x670etmahawifi_mag_x670e_tomahawk_wifi_1771748.jpg"
+  },
+  {
+    "id": 58,
+    "category": "платы",
+    "name": "Asus ROG STRIX B850-I GAMING WIFI",
+    "price": 27749,
+    "socket": "AM5",
+    "form_factor": "Mini ITX",
+    "max_memory": 96,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/232D5674-266F-43B4-B4FD-6C0D87A5157C"
+  },
+  {
+    "id": 59,
+    "category": "платы",
+    "name": "Asus ROG STRIX B650E-I GAMING WIFI",
+    "price": 20345,
+    "socket": "AM5",
+    "form_factor": "Mini ITX",
+    "max_memory": 96,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/42CF69C2-D16A-449F-A113-E7AB3C57AEE7/v1/img/spec/connectivity.png"
+  },
+  {
+    "id": 60,
+    "category": "платы",
+    "name": "MSI MPG X870E CARBON WIFI",
+    "price": 46249,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/X870/mpg-x870e-carbon-wifi/mpg-x870e-carbon-wifi-kv-pd.png"
+  },
+  {
+    "id": 61,
+    "category": "платы",
+    "name": "Gigabyte B850 GAMING WIFI6",
+    "price": 16649,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/20/14/LD0006201492.jpg"
+  },
+  {
+    "id": 62,
+    "category": "платы",
+    "name": "MSI B850 GAMING PLUS WIFI",
+    "price": 18499,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/B850/b850-gaming-plus-wifi/images/kv-pd.png"
+  },
+  {
+    "id": 63,
+    "category": "платы",
+    "name": "Asus TUF GAMING X870-PLUS WIFI",
+    "price": 24697,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/074e8ea2-05b9-4f74-bee4-fa2ad2e81c21/V1/img/spec/spec-gaming.webp"
+  },
+  {
+    "id": 64,
+    "category": "платы",
+    "name": "Gigabyte Z790 AORUS ELITE AX",
+    "price": 17112,
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/2204/innergigabyteimages/specsmall02.jpg"
+  },
+  {
+    "id": 65,
+    "category": "платы",
+    "name": "MSI B550-A PRO",
+    "price": 11654,
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/features/MB/A-Pro/B550/b550-a-Pro-board01.png"
+  },
+  {
+    "id": 66,
+    "category": "платы",
+    "name": "Asus ROG CROSSHAIR X870E EXTREME",
+    "price": 92499,
+    "socket": "AM5",
+    "form_factor": "EATX",
+    "max_memory": 256,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/e69310e1-3b89-42d7-8899-cf3c6f433b0f/v1/img/kv/pd.png"
+  },
+  {
+    "id": 67,
+    "category": "платы",
+    "name": "ASRock B850M Pro RS WiFi",
+    "price": 13874,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 256,
+    "imageUrl": "https://www.asrock.com/mb/photo/B850M+Pro+RS+WiFi+White(L2).png"
+  },
+  {
+    "id": 68,
+    "category": "платы",
+    "name": "Asus TUF GAMING Z790-PLUS WIFI",
+    "price": 20349,
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/3f389dc4-d7ec-4fd6-b3f2-1158e691124c/V1/img/kv-main.png"
+  },
+  {
+    "id": 69,
+    "category": "платы",
+    "name": "Gigabyte X870E AORUS PRO ICE",
+    "price": 30524,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/3760/innergigabyte/images/product/connectivity.png"
+  },
+  {
+    "id": 70,
+    "category": "платы",
+    "name": "Gigabyte B650 AORUS ELITE AX",
+    "price": 17204,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://www.pcstudio.in/wp-content/uploads/2022/10/Gigabyte-B650-Aorus-Elite-AX-Motherboard-2.jpg"
+  },
+  {
+    "id": 71,
+    "category": "платы",
+    "name": "Gigabyte A620I AX",
+    "price": 12765,
+    "socket": "AM5",
+    "form_factor": "Mini ITX",
+    "max_memory": 96,
+    "imageUrl": "https://cdn.mos.cms.futurecdn.net/NSkD7eHQeqacooXhGZoNxg-1200-80.jpg"
+  },
+  {
+    "id": 72,
+    "category": "платы",
+    "name": "Gigabyte X870I AORUS PRO ICE",
+    "price": 26362,
+    "socket": "AM5",
+    "form_factor": "Mini ITX",
+    "max_memory": 128,
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/3797/innergigabyte/images/product/diagram.png"
+  },
+  {
+    "id": 73,
+    "category": "платы",
+    "name": "MSI B650M GAMING PLUS WIFI",
+    "price": 20305,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 192,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/B650M/B650m-gaming-plus-wifi/images/hero/b650m-gaming-plus-wifi-hero03.png"
+  },
+  {
+    "id": 74,
+    "category": "платы",
+    "name": "Asus ROG STRIX B850-F GAMING WIFI",
+    "price": 24899,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/6CD439E8-035B-4800-B969-86DEC4D1FCC5/w1000/h732"
+  },
+  {
+    "id": 75,
+    "category": "платы",
+    "name": "ASRock X870 Pro RS",
+    "price": 16649,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/17/91/LD0006179159.jpg"
+  },
+  {
+    "id": 76,
+    "category": "платы",
+    "name": "MSI PRO A620M-E",
+    "price": 14328,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 96,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/A620M/PRO-A620M-E/images/gen4.png"
+  },
+  {
+    "id": 77,
+    "category": "платы",
+    "name": "Asus TUF GAMING B650E-PLUS WIFI",
+    "price": 17574,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/79cbd1a8-e3d3-4b2a-af49-7522f3f494c6/V1/img/kv-main.png"
+  },
+  {
+    "id": 78,
+    "category": "платы",
+    "name": "Gigabyte B850 GAMING X WIFI6E",
+    "price": 18314,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://c1.neweggimages.com/BizIntell/item/MB/Motherboards+-+AMD/13-145-548/26.png"
+  },
+  {
+    "id": 79,
+    "category": "платы",
+    "name": "Gigabyte B550 GAMING X V2",
+    "price": 12024,
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://i.ytimg.com/vi/3BesEg1w_5I/maxresdefault.jpg"
+  },
+  {
+    "id": 80,
+    "category": "платы",
+    "name": "ASRock B650M-HDV/M.2",
+    "price": 12823,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 96,
+    "imageUrl": "https://www.cclonline.com/images/avante/B650M-HDV_M2_box.jpg"
+  },
+  {
+    "id": 81,
+    "category": "платы",
+    "name": "Asus Z790 GAMING WIFI7",
+    "price": 16649,
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/decc4b6e-e054-42df-8c0b-5c1ced303259/img/spec/spec_performance_mobile.png"
+  },
+  {
+    "id": 82,
+    "category": "платы",
+    "name": "MSI MAG X870E TOMAHAWK WIFI",
+    "price": 28674,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/X870/mag-x870e-tomahawk-wifi/frozr/msi-x870e-tomahawk-wifi-frozr-sync.png"
+  },
+  {
+    "id": 83,
+    "category": "платы",
+    "name": "Gigabyte B550 EAGLE WIFI6",
+    "price": 12024,
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/Keyfeature/3907/innergigabyte/images/product/summary.png"
+  },
+  {
+    "id": 84,
+    "category": "платы",
+    "name": "MSI PRO H610M-G DDR4",
+    "price": 8694,
+    "socket": "LGA1700",
+    "form_factor": "Micro ATX",
+    "max_memory": 64,
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_1653874089f558c1be9da2ebf31bfe259c09522b11.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+  },
+  {
+    "id": 85,
+    "category": "платы",
+    "name": "MSI MEG X870E GODLIKE",
+    "price": 92499,
+    "socket": "AM5",
+    "form_factor": "EATX",
+    "max_memory": 256,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/X870EGODLIKE/images/mb-godlike-01.png"
+  },
+  {
+    "id": 86,
+    "category": "платы",
+    "name": "ASRock X870 Pro RS WiFi",
+    "price": 22292,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://www.asrock.com/mb/features/X870+Pro+RS+WiFi-1_mobile.jpg"
+  },
+  {
+    "id": 87,
+    "category": "платы",
+    "name": "Gigabyte B850M AORUS ELITE WIFI6E ICE",
+    "price": 18499,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/20/13/LD0006201360.jpg"
+  },
+  {
+    "id": 88,
+    "category": "платы",
+    "name": "ASRock B760M-HDV/M.2",
+    "price": 11037,
+    "socket": "LGA1700",
+    "form_factor": "Micro ATX",
+    "max_memory": 96,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/05/86/LD0006058620.jpg"
+  },
+  {
+    "id": 89,
+    "category": "платы",
+    "name": "Gigabyte TRX40 DESIGNARE",
+    "price": 134033,
+    "socket": "sTRX4",
+    "form_factor": "XL ATX",
+    "max_memory": 256,
+    "imageUrl": "https://www.vortez.net/contentteller.php?ct=news&action=file&id=17688"
+  },
+  {
+    "id": 90,
+    "category": "платы",
+    "name": "ASRock A520M-HDV",
+    "price": 5827,
+    "socket": "AM4",
+    "form_factor": "Micro ATX",
+    "max_memory": 64,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/70/87/LD0005708783_1.jpg"
+  },
+  {
+    "id": 91,
+    "category": "платы",
+    "name": "ASRock B550 Phantom Gaming 4/ac",
+    "price": 9249,
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://motherboarddb.com/media/images/Asrock/B550+Phantom+Gaming+4-ac/B550_Phantom_Gaming_4-ac-5.png"
+  },
+  {
+    "id": 92,
+    "category": "платы",
+    "name": "Gigabyte X870 AORUS ELITE WIFI7",
+    "price": 24235,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://m.media-amazon.com/images/I/81OtLGxXwFL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 93,
+    "category": "платы",
+    "name": "Asus ROG STRIX B760-I GAMING WIFI",
+    "price": 19420,
+    "socket": "LGA1700",
+    "form_factor": "Mini ITX",
+    "max_memory": 96,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/54A4FA63-B5D1-40E2-93D0-62603347E1BA/w1000/h732"
+  },
+  {
+    "id": 94,
+    "category": "платы",
+    "name": "Gigabyte X870 GAMING WIFI6",
+    "price": 17574,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://m.media-amazon.com/images/I/81Cz7JSY+dL._AC_.jpg"
+  },
+  {
+    "id": 95,
+    "category": "платы",
+    "name": "ASRock A620M-HDV/M.2",
+    "price": 11945,
+    "socket": "AM5",
+    "form_factor": "Micro ATX",
+    "max_memory": 96,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/03/41/LD0006034175.jpg"
+  },
+  {
+    "id": 96,
+    "category": "платы",
+    "name": "MSI MAG Z890 TOMAHAWK WIFI",
+    "price": 22199,
+    "socket": "LGA1851",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://m.media-amazon.com/images/I/810DDvs6N2L._AC_SL1500_.jpg"
+  },
+  {
+    "id": 97,
+    "category": "платы",
+    "name": "Asus ProArt X870E-CREATOR WIFI",
+    "price": 47914,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/935d02ef-5ed8-4475-aead-1bfbc3324eee/"
+  },
+  {
+    "id": 98,
+    "category": "платы",
+    "name": "ASRock B650 PG LIGHTNING",
+    "price": 12024,
+    "socket": "AM5",
+    "form_factor": "ATX",
+    "max_memory": 256,
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/98/56/LD0005985675.jpg"
+  },
+  {
+    "id": 99,
+    "category": "платы",
+    "name": "MSI MAG B550 TOMAHAWK",
+    "price": 12949,
+    "socket": "AM4",
+    "form_factor": "ATX",
+    "max_memory": 128,
+    "imageUrl": "https://www.falconcomputers.co.uk/media/product/85793/0/0/msi-mag-b550-tomahawk-amd-socket-am4-motherboard.jpg?"
+  },
+  {
+    "id": 100,
+    "category": "платы",
+    "name": "MSI MAG B760 TOMAHAWK WIFI",
+    "price": 15262,
+    "socket": "LGA1700",
+    "form_factor": "ATX",
+    "max_memory": 192,
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/B760/mag-b760-tomahawk-wifi/mag_b760_tomahawk_wifi-block01.png"
+  }
+]
