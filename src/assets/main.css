@@ -1,6 +1,111 @@
 @import './base.css';
-@import "tailwindcss";
+@import 'tailwindcss';
 
-body {
-  background-color: rgb(1, 77, 143);
+/* Фон страницы зависит от темы — берём те же цвета, что и корневой div в App.vue
+   (bg-neutral-200 / bg-neutral-900), чтобы трек скроллбара сливался с фоном. */
+body.light-theme {
+  background-color: #e5e5e5; /* tailwind neutral-200 */
+}
+body.dark-theme {
+  background-color: #171717; /* tailwind neutral-900 */
+}
+
+/* ========================================================
+   Кастомный скроллбар — единый стиль на весь сайт
+   ======================================================== */
+
+/* ---- Firefox ---- */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #84cc16 transparent;
+}
+html:has(body.dark-theme) {
+  scrollbar-color: #db2777 transparent;
+}
+/* Fallback для Firefox без :has — класс ставится на body, но
+   Firefox 121+ уже поддерживает :has, а старые версии
+   получат лаймовый цвет из html выше, что тоже приемлемо. */
+
+/* ---- Глобальный скроллбар окна (WebKit/Blink) ---- */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #84cc16;
+  border-radius: 20px;
+}
+body.dark-theme::-webkit-scrollbar-thumb,
+html:has(body.dark-theme)::-webkit-scrollbar-thumb {
+  background: #db2777;
+}
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.2);
+}
+
+/* ---- Любые внутренние скроллящиеся элементы ---- */
+body.light-theme *::-webkit-scrollbar,
+body.dark-theme *::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+body.light-theme *::-webkit-scrollbar-track,
+body.dark-theme *::-webkit-scrollbar-track {
+  background: transparent;
+}
+body.light-theme *::-webkit-scrollbar-thumb {
+  background: #84cc16;
+  border-radius: 20px;
+}
+body.dark-theme *::-webkit-scrollbar-thumb {
+  background: #db2777;
+  border-radius: 20px;
+}
+body.light-theme *::-webkit-scrollbar-thumb:hover,
+body.dark-theme *::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.2);
+}
+body.light-theme * {
+  scrollbar-color: #84cc16 transparent;
+  scrollbar-width: thin;
+}
+body.dark-theme * {
+  scrollbar-color: #db2777 transparent;
+  scrollbar-width: thin;
+}
+
+/* ---- Утилитарные классы (как в Profile.vue), оставлены для совместимости ---- */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.2);
+}
+.scrollbar-dark::-webkit-scrollbar-thumb {
+  background: #db2777;
+}
+.scrollbar-light::-webkit-scrollbar-thumb {
+  background: #84cc16;
+}
+.scrollbar-dark {
+  scrollbar-width: thin;
+  scrollbar-color: #db2777 transparent;
+}
+.scrollbar-light {
+  scrollbar-width: thin;
+  scrollbar-color: #84cc16 transparent;
 }

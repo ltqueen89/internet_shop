@@ -1,7 +1,10 @@
 <template>
   <div class="">
     <svg
-      class="h-10 switch-mode hover:scale-120 transition duration-300 stroke-neutral-400"
+      :class="[
+        'h-10 switch-mode hover:scale-120 transition duration-300',
+        isDark ? 'stroke-pink-500' : 'stroke-lime-500',
+      ]"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="1 1 22 22"
@@ -17,47 +20,9 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isDark: false,
-    }
-  },
-  methods: {
-    toggleTheme() {
-      this.isDark = !this.isDark
-      localStorage.setItem('theme', this.isDark ? 'dark' : 'light')
+<script setup>
+import { inject, computed } from 'vue'
 
-      // Добавляем класс для body если нужно
-      if (this.isDark) {
-        document.body.classList.add('dark-theme')
-        document.body.classList.remove('light-theme')
-      } else {
-        document.body.classList.add('light-theme')
-        document.body.classList.remove('dark-theme')
-      }
-    },
-    initTheme() {
-      const savedTheme = localStorage.getItem('theme')
-      if (savedTheme) {
-        this.isDark = savedTheme === 'dark'
-      } else {
-        this.isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-      }
-
-      // Устанавливаем классы для body при инициализации
-      if (this.isDark) {
-        document.body.classList.add('dark-theme')
-        document.body.classList.remove('light-theme')
-      } else {
-        document.body.classList.add('light-theme')
-        document.body.classList.remove('dark-theme')
-      }
-    },
-  },
-  mounted() {
-    this.initTheme()
-  },
-}
+const theme = inject('theme', null)
+const isDark = computed(() => theme?.isDark?.value ?? false)
 </script>

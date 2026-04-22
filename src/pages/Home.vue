@@ -9,7 +9,7 @@ const { cart, addToCart, removeFromCart } = inject('cart')
 
 const items = ref([])
 const currentPage = ref(1)
-const itemsPerPage = 10 
+const itemsPerPage = 10
 
 const filters = reactive({
   sortBy: 'name',
@@ -57,19 +57,31 @@ const onChangeSearchInput = (event) => {
 }
 
 const addToFavorite = async (item) => {
+  const wasFavorite = !!item.isFavorite
+  const prevFavoriteId = item.favoriteId
   try {
-    if (!item.isFavorite) {
-      const obj = { item_id: item.id, item }
+    if (!wasFavorite) {
+      // Оптимистично помечаем как избранное, откатываем при ошибке.
       item.isFavorite = true
-      const { data } = await axios.post(`https://d34e000f87467eb3.mokky.dev/favorites`, obj)
+      const { data } = await axios.post('https://d34e000f87467eb3.mokky.dev/favorites', {
+        item_id: item.id,
+        item,
+      })
       item.favoriteId = data.id
     } else {
+      if (!prevFavoriteId) {
+        item.isFavorite = false
+        return
+      }
       item.isFavorite = false
-      await axios.delete(`https://d34e000f87467eb3.mokky.dev/favorites/${item.favoriteId}`)
+      await axios.delete(`https://d34e000f87467eb3.mokky.dev/favorites/${prevFavoriteId}`)
       item.favoriteId = null
     }
   } catch (err) {
-    console.log(err)
+    console.error('Ошибка при обновлении избранного:', err)
+    // Откат
+    item.isFavorite = wasFavorite
+    item.favoriteId = prevFavoriteId
   }
 }
 
@@ -104,15 +116,14 @@ const fetchItems = async () => {
     }
 
     if (filters.searchQuery) {
-      combinedData = combinedData.filter((item) =>
-        item.name.toLowerCase().includes(filters.searchQuery.toLowerCase()),
-      )
+      const q = filters.searchQuery.toLowerCase()
+      combinedData = combinedData.filter((item) => (item.name ?? '').toLowerCase().includes(q))
     }
 
     // ИСПРАВЛЕННАЯ СОРТИРОВКА
     combinedData.sort((a, b) => {
       if (filters.sortBy === 'name') {
-        return a.name.localeCompare(b.name)
+        return (a.name ?? '').localeCompare(b.name ?? '')
       }
 
       // Преобразуем в числа на случай, если в JSON пришла строка
@@ -148,9 +159,6 @@ const nextPage = () => {
 }
 
 onMounted(async () => {
-  const localCart = localStorage.getItem('cart')
-  cart.value = localCart && localCart !== 'undefined' ? JSON.parse(localCart) : []
-
   await fetchItems()
 })
 
@@ -165,27 +173,37 @@ watch(
   { deep: true },
 )
 
-watch(filters, fetchItems)
+// Debounce для fetchItems, чтобы поиск/фильтры не спамили API на каждый символ.
+let fetchDebounceId = null
+const debouncedFetchItems = () => {
+  if (fetchDebounceId) clearTimeout(fetchDebounceId)
+  fetchDebounceId = setTimeout(() => {
+    fetchDebounceId = null
+    fetchItems()
+  }, 300)
+}
+
+watch(filters, debouncedFetchItems)
 </script>
 
 <template>
   <div
-    class="w-full grid grid-cols-1 md:grid-cols-3 items-start pt-8 px-10 gap-4 transition-all duration-400"
+    class="w-full grid grid-cols-1 md:grid-cols-3 items-start pt-4 sm:pt-8 px-3 sm:px-6 md:px-10 gap-4 transition-all duration-400"
   >
     <h2
       :class="[
-        'text-3xl font-bold uppercase transition-colors',
+        'text-2xl sm:text-3xl font-bold uppercase transition-colors text-center md:text-left',
         isDark ? 'text-pink-600' : 'text-lime-600',
       ]"
     >
       {{ filters.category ? filters.category : 'Все комплектующие' }}
     </h2>
 
-    <div class="flex gap-3 justify-self-center !mt-[-32px]">
+    <div class="flex flex-wrap gap-2 sm:gap-3 justify-center md:justify-self-center md:!mt-[-32px]">
       <div
         @click="onChangeCategory('')"
         :class="[
-          'h-10 px-4 content-center text-center rounded-b-lg shadow-sm cursor-pointer transition-all duration-300',
+          'h-9 sm:h-10 px-3 sm:px-4 text-sm sm:text-base content-center text-center rounded-lg md:rounded-b-lg md:rounded-t-none shadow-sm cursor-pointer transition-all duration-300',
           filters.category === ''
             ? isDark
               ? 'bg-pink-600 text-white'
@@ -199,12 +217,20 @@ watch(filters, fetchItems)
       </div>
 
       <div
-        v-for="cat in ['Процессоры', 'Видеокарты', 'Платы', 'ОЗУ', 'Накопители', 'Охлаждение', 'БП', 'Корпуса']"
+        v-for="cat in [
+          'Процессоры',
+          'Видеокарты',
+          'Платы',
+          'ОЗУ',
+          'Накопители',
+          'Охлаждение',
+          'БП',
+          'Корпуса',
+        ]"
         :key="cat"
         @click="onChangeCategory(cat)"
         :class="[
-          'h-10 px-4 content-center text-center rounded-b-lg shadow-sm cursor-pointer transition-all duration-300 font-bold',
-          // Если категория выбрана — делаем её ярче
+          'h-9 sm:h-10 px-3 sm:px-4 text-sm sm:text-base content-center text-center rounded-lg md:rounded-b-lg md:rounded-t-none shadow-sm cursor-pointer transition-all duration-300 font-bold',
           filters.category === cat
             ? isDark
               ? 'bg-pink-600 text-white'
@@ -218,11 +244,12 @@ watch(filters, fetchItems)
       </div>
     </div>
 
-    <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto justify-self-end">
+    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full md:w-auto md:justify-self-end">
       <select
         @change="onChangeSelect"
+        aria-label="Сортировка"
         :class="[
-          'border-1 font-semibold rounded-xl py-2 px-4 outline-none transition-all duration-300',
+          'border-1 font-semibold rounded-xl py-2 px-4 outline-none transition-all duration-300 w-full sm:w-auto',
           isDark
             ? 'bg-neutral-800 border-pink-700 text-pink-500 focus:border-pink-500'
             : 'bg-white border-lime-400 text-lime-600 focus:border-lime-500',
@@ -253,6 +280,7 @@ watch(filters, fetchItems)
           @input="onChangeSearchInput"
           type="text"
           placeholder="Поиск деталей..."
+          aria-label="Поиск деталей"
           :class="[
             'border-1 rounded-xl py-2 pl-10 pr-4  outline-none font-semibold transition-all duration-300 w-full',
             isDark
@@ -264,14 +292,14 @@ watch(filters, fetchItems)
     </div>
   </div>
 
-  <div class="px-10 mt-10">
+  <div class="px-3 sm:px-6 md:px-10 mt-6 sm:mt-10">
     <CardList
       :items="paginatedItems"
       @add-to-favorite="addToFavorite"
       @add-to-cart="onClickAddPlus"
     />
 
-    <div v-if="totalPages > 1" class="flex justify-center items-center !pb-5 gap-4 ">
+    <div v-if="totalPages > 1" class="flex justify-center items-center !pb-5 gap-4">
       <button
         @click="prevPage"
         :disabled="currentPage === 1"

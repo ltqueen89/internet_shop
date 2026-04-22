@@ -2,13 +2,13 @@
   <div :class="['min-h-screen duration-400', isDark ? 'bg-neutral-800' : 'bg-neutral-200']">
     <section class="flex flex-col items-center w-full h-full p-3 gap-y-4 sm:gap-y-6">
       <router-link to="/" class="flex items-center gap-x-2">
-          <svg
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          :class="['h-20 duration-400', isDark ? 'stroke-pink-500' : 'stroke-lime-500']"
+          :class="['h-14 sm:h-20 duration-400', isDark ? 'stroke-pink-500' : 'stroke-lime-500']"
         >
           <path
             stroke-linecap="round"
@@ -20,7 +20,7 @@
 
       <div
         :class="[
-          'w-full p-4 border-3 rounded-md sm:w-100 sm:p-6 sm:rounded-lg transition-colors duration-300',
+          'w-full max-w-[440px] p-4 border-3 rounded-md sm:p-6 sm:rounded-lg transition-colors duration-300',
           isDark ? 'border-pink-700 bg-pink-600' : 'border-lime-500 bg-lime-600',
         ]"
       >
@@ -32,7 +32,7 @@
           <div class="flex flex-col gap-y-1">
             <label for="email" class="text-sm !font-semibold text-white sm:text-base">Email</label>
             <input
-              v-model="email" 
+              v-model="email"
               placeholder="Ivanivanov@gmail.com"
               type="email"
               id="email"
@@ -47,7 +47,9 @@
           </div>
 
           <div class="flex flex-col gap-y-1">
-            <label for="password" class="text-sm !font-semibold text-white sm:text-base">Password</label>
+            <label for="password" class="text-sm !font-semibold text-white sm:text-base"
+              >Password</label
+            >
             <input
               v-model="password"
               placeholder="Password"
@@ -64,7 +66,10 @@
           </div>
 
           <div v-if="!isLogin" class="flex flex-col gap-y-1">
-            <label for="passwordConfirmation" class="text-sm !font-semibold text-white sm:text-base">
+            <label
+              for="passwordConfirmation"
+              class="text-sm !font-semibold text-white sm:text-base"
+            >
               Password Confirmation
             </label>
             <input
@@ -82,7 +87,10 @@
             />
           </div>
 
-          <p v-if="errorMessage" class="text-white text-xs font-bold bg-red-500 p-2 rounded text-center">
+          <p
+            v-if="errorMessage"
+            class="text-white text-xs font-bold bg-red-500 p-2 rounded text-center"
+          >
             {{ errorMessage }}
           </p>
 
@@ -92,10 +100,10 @@
             :class="[
               'px-6 py-2 mt-2 text-sm !font-semibold rounded-md text-indigo-50 transition-all duration-300 sm:mt-1 sm:text-base sm:rounded-lg',
               isDark ? 'bg-pink-500 hover:bg-pink-700' : 'bg-lime-500 hover:bg-lime-700',
-              loading ? 'opacity-50 cursor-not-allowed' : ''
+              loading ? 'opacity-50 cursor-not-allowed' : '',
             ]"
           >
-            {{ loading ? 'Processing...' : (isLogin ? 'Log In' : 'Sign Up') }}
+            {{ loading ? 'Processing...' : isLogin ? 'Log In' : 'Sign Up' }}
           </button>
         </form>
 
@@ -105,12 +113,14 @@
             isDark ? 'text-gray-300' : 'text-gray-600',
           ]"
         >
-          {{ isLogin ? "Don't have an account?" : "Already have an account?" }}
+          {{ isLogin ? "Don't have an account?" : 'Already have an account?' }}
           <button
-            @click="isLogin = !isLogin; errorMessage = ''"
+            @click="toggleMode"
             :class="[
               'font-medium hover:text-indigo-700 transition-colors duration-300 underline bg-transparent border-none cursor-pointer',
-              isDark ? 'text-indigo-400 hover:text-indigo-300' : 'text-indigo-600 hover:text-indigo-700',
+              isDark
+                ? 'text-indigo-400 hover:text-indigo-300'
+                : 'text-indigo-600 hover:text-indigo-700',
             ]"
           >
             {{ isLogin ? 'Sign Up' : 'Log In' }}
@@ -132,21 +142,30 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'fire
 
 export default {
   components: { sswitch },
+  inject: ['theme'],
   data() {
     return {
-      isDark: false,
       isLogin: false, // Переключатель режимов
       email: '',
       password: '',
       passwordConfirm: '',
       errorMessage: '',
-      loading: false
+      loading: false,
     }
+  },
+  computed: {
+    isDark() {
+      return (this as any).theme?.isDark?.value ?? false
+    },
   },
   methods: {
     // Общий метод для обработки формы
     async handleSubmit() {
-      this.isLogin ? this.login() : this.register();
+      if (this.isLogin) {
+        await this.login()
+      } else {
+        await this.register()
+      }
     },
 
     async register() {
@@ -160,7 +179,7 @@ export default {
         await createUserWithEmailAndPassword(auth, this.email, this.password)
         this.$router.push('/')
       } catch (error: any) {
-        this.handleAuthError(error);
+        this.handleAuthError(error)
       } finally {
         this.loading = false
       }
@@ -173,7 +192,7 @@ export default {
         await signInWithEmailAndPassword(auth, this.email, this.password)
         this.$router.push('/')
       } catch (error: any) {
-        this.handleAuthError(error);
+        this.handleAuthError(error)
       } finally {
         this.loading = false
       }
@@ -185,7 +204,7 @@ export default {
         this.errorMessage = 'This email is already registered'
       } else if (error.code === 'auth/weak-password') {
         this.errorMessage = 'Password should be at least 6 characters'
-      } else if (error.code === 'auth/user-not-found' || error.code === 'auth/wrong-password' || error.code === 'auth/invalid-credential') {
+      } else if (error.code === 'auth/invalid-credential') {
         this.errorMessage = 'Invalid email or password'
       } else {
         this.errorMessage = 'An error occurred. Please try again.'
@@ -193,22 +212,13 @@ export default {
     },
 
     toggleTheme() {
-      this.isDark = !this.isDark
-      localStorage.setItem('theme', this.isDark ? 'dark' : 'light')
-      this.applyTheme()
+      ;(this as any).theme?.toggleTheme?.()
     },
-    initTheme() {
-      const savedTheme = localStorage.getItem('theme')
-      this.isDark = savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches
-      this.applyTheme()
+
+    toggleMode() {
+      this.isLogin = !this.isLogin
+      this.errorMessage = ''
     },
-    applyTheme() {
-      document.body.classList.toggle('dark-theme', this.isDark);
-      document.body.classList.toggle('light-theme', !this.isDark);
-    }
-  },
-  mounted() {
-    this.initTheme()
   },
 }
 </script>

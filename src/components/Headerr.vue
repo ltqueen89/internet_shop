@@ -1,6 +1,6 @@
 <script setup>
 import { useRouter } from 'vue-router'
-import { inject, ref, onMounted } from 'vue'
+import { inject, ref, onMounted, onBeforeUnmount } from 'vue'
 import { auth } from '../main' // Импортируем auth
 import { onAuthStateChanged } from 'firebase/auth'
 import sswitch from '../pages/sswitchButton.vue'
@@ -10,12 +10,17 @@ const emit = defineEmits(['openDrawer'])
 
 // Состояние авторизации
 const isLoggedIn = ref(false)
+let unsubscribeAuth = null
 
 // Проверяем статус пользователя при загрузке
 onMounted(() => {
-  onAuthStateChanged(auth, (user) => {
+  unsubscribeAuth = onAuthStateChanged(auth, (user) => {
     isLoggedIn.value = !!user // true если юзер есть, false если нет
   })
+})
+
+onBeforeUnmount(() => {
+  if (unsubscribeAuth) unsubscribeAuth()
 })
 
 // Получаем глобальное состояние темы
@@ -26,13 +31,13 @@ const { isDark, toggleTheme } = inject('theme')
   <header>
     <div
       :class="[
-        ' flex rounded-b-3xl shadow-2xl pt-10 pb-12 justify-between px-10 transition-colors duration-400',
+        'flex flex-wrap rounded-b-3xl shadow-2xl pt-4 sm:pt-6 md:pt-10 pb-6 sm:pb-8 md:pb-12 justify-between items-center px-3 sm:px-6 md:px-10 gap-3 transition-colors duration-400',
         isDark ? 'bg-neutral-800' : 'bg-lime-300',
       ]"
     >
       <div
         @click="router.push('/')"
-        class="flex h-10 w-46 items-center gap-2 cursor-pointer transition-all"
+        class="flex h-10 items-center gap-2 cursor-pointer transition-all"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +45,10 @@ const { isDark, toggleTheme } = inject('theme')
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          :class="['h-20 duration-400', isDark ? 'stroke-pink-500' : 'stroke-lime-500']"
+          :class="[
+            'h-12 sm:h-16 md:h-20 duration-400',
+            isDark ? 'stroke-pink-500' : 'stroke-lime-500',
+          ]"
         >
           <path
             stroke-linecap="round"
@@ -48,34 +56,39 @@ const { isDark, toggleTheme } = inject('theme')
             d="M4 19H20M4 5V16H20V5L16 9L12 5L8 9L4 5Z"
           />
         </svg>
-        <h2 :class="['text-xl uppercase font-bold', isDark ? 'text-pink-500' : 'text-lime-600']">
+        <h2
+          :class="[
+            'text-base sm:text-lg md:text-xl uppercase font-bold whitespace-nowrap',
+            isDark ? 'text-pink-500' : 'text-lime-600',
+          ]"
+        >
           Queen pc
         </h2>
       </div>
 
-      <div class="flex items-center gap-4">
-        <div @click="toggleTheme" class="mr-4 cursor-pointer hover:scale-110 transition-transform">
+      <div class="flex flex-wrap items-center gap-2 sm:gap-4">
+        <div @click="toggleTheme" class="cursor-pointer hover:scale-110 transition-transform">
           <sswitch></sswitch>
         </div>
 
-        <div class="flex items-center gap-4">
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3 md:gap-4">
           <div
             @click.stop="() => emit('openDrawer')"
             :class="[
-              'h-12 px-4 text-lg hover:scale-105 duration-300 shadow-lg gap-2 cursor-pointer flex items-center rounded-xl transition-all',
+              'h-10 sm:h-12 px-3 sm:px-4 text-sm sm:text-base md:text-lg hover:scale-105 duration-300 shadow-lg gap-2 cursor-pointer flex items-center rounded-xl transition-all',
               isDark
                 ? 'bg-neutral-900 text-pink-500 hover:bg-neutral-600'
                 : 'bg-white text-lime-500 hover:bg-gray-50',
             ]"
           >
-            <span>Корзина</span>
+            <span class="hidden sm:inline">Корзина</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="size-6"
+              class="size-5 sm:size-6"
             >
               <path
                 stroke-linecap="round"
@@ -88,20 +101,20 @@ const { isDark, toggleTheme } = inject('theme')
           <router-link to="/favorites">
             <div
               :class="[
-                'h-12 px-4 text-lg hover:scale-105 duration-300 shadow-lg gap-2 cursor-pointer flex items-center rounded-xl transition-all',
+                'h-10 sm:h-12 px-3 sm:px-4 text-sm sm:text-base md:text-lg hover:scale-105 duration-300 shadow-lg gap-2 cursor-pointer flex items-center rounded-xl transition-all',
                 isDark
                   ? 'bg-neutral-900 text-pink-500 hover:bg-neutral-600'
                   : 'bg-white text-lime-500 hover:bg-gray-50',
               ]"
             >
-              <span>Избранное</span>
+              <span class="hidden sm:inline">Избранное</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-6"
+                class="size-5 sm:size-6"
               >
                 <path
                   stroke-linecap="round"
@@ -115,20 +128,20 @@ const { isDark, toggleTheme } = inject('theme')
           <router-link to="/profile">
             <div
               :class="[
-                'h-12 px-4 text-lg hover:scale-105 duration-300 shadow-lg gap-2 cursor-pointer flex items-center rounded-xl transition-all',
+                'h-10 sm:h-12 px-3 sm:px-4 text-sm sm:text-base md:text-lg hover:scale-105 duration-300 shadow-lg gap-2 cursor-pointer flex items-center rounded-xl transition-all',
                 isDark
                   ? 'bg-neutral-900 text-pink-500 hover:bg-neutral-600'
                   : 'bg-white text-lime-500 hover:bg-gray-50',
               ]"
             >
-              <span>Профиль</span>
+              <span class="hidden sm:inline">Профиль</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="size-6"
+                class="size-5 sm:size-6"
               >
                 <path
                   stroke-linecap="round"
@@ -141,7 +154,7 @@ const { isDark, toggleTheme } = inject('theme')
 
           <router-link v-if="!isLoggedIn" to="/reg">
             <div
-              class="bg-indigo-500 h-12 px-6 rounded-xl flex items-center justify-center font-semibold text-white shadow-xl cursor-pointer hover:bg-indigo-600 hover:scale-105 transition-all ml-2"
+              class="bg-indigo-500 h-10 sm:h-12 px-4 sm:px-6 text-sm sm:text-base rounded-xl flex items-center justify-center font-semibold text-white shadow-xl cursor-pointer hover:bg-indigo-600 hover:scale-105 transition-all"
             >
               Sign Up
             </div>

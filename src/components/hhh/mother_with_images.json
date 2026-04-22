@@ -7,7 +7,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/39201D89-A28D-464A-B66A-911E3D8525E7/with_alpha/rw600",
+    "imageUrl": "https://mediawebimg.asus.com/files/media/d1b30d89-702a-48a2-9947-d2191d7dac0f/img/new_product_imgs/04_Customization/Personalization/Aura_Sync.png",
     "memory_slots": 4
   },
   {
@@ -18,7 +18,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "https://vsn.msi.com/picture/image/front-m.png",
+    "imageUrl": "https://m.media-amazon.com/images/I/91psUHGxpzL._AC_.jpg",
     "memory_slots": 4
   },
   {
@@ -29,7 +29,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "https://vsn.msi.com/picture/image/front-m.png",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/B650/MAG-B650-TOMAHAWK-WIFI/mag-b650-tomahawk-wifi.png",
     "memory_slots": 4
   },
   {
@@ -40,7 +40,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/e268f7004f147963283256038166d772/Product/41551/png/1000",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/16/90/LD0006169071.jpg",
     "memory_slots": 4
   },
   {
@@ -51,7 +51,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/497A48E1-2621-4A59-867F-0A8659EDDAF3/with_alpha/rw600",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/97/33/LD0005973392.jpg",
     "memory_slots": 4
   },
   {
@@ -62,7 +62,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/16a307062458472491a9954784402685/Product/37841/png/1000",
+    "imageUrl": "https://cdn0.centrecom.com.au/images/upload/0172516_0.jpeg",
     "memory_slots": 4
   },
   {
@@ -73,7 +73,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/3e351897-48f8-4b21-8761-04981665a396/with_alpha/rw600",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/f46f4804-21d2-419a-8119-c3998da9674d/V1/img/spec/spec-cooling.webp",
     "memory_slots": 4
   },
   {
@@ -84,7 +84,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 256,
-    "imageUrl": "https://www.asrock.com/mb/photo/B650M%20Pro%20RS%20WiFi(L1).png",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/03/69/LD0006036997.jpg",
     "memory_slots": 4
   },
   {
@@ -95,7 +95,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "https://vsn.msi.com/picture/image/front-m.png",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/X870/MAG-x870-Tomahawk-wifi/features/hero/msi-x870-tomahawk-wifi-hero-02.png",
     "memory_slots": 4
   },
   {
@@ -106,7 +106,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 64,
-    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/1e3b6278855a82200216506307374895/Product/36021/png/1000",
+    "imageUrl": "https://media.pangoly.com/img/6/6/9/d/669d0831-6008-4e6a-9052-887d2a453d80.jpg",
     "memory_slots": 4
   },
   {
@@ -117,7 +117,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/7711f5e8-5872-4d7c-87b6-9694c9d72492/with_alpha/rw600",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/2fb644d0-cf3e-4356-8e0f-2fb3c8914421/w692",
     "memory_slots": 4
   },
   {
@@ -128,7 +128,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "https://vsn.msi.com/picture/image/front-m.png",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/05/88/LD0006058868.jpg",
     "memory_slots": 4
   },
   {
@@ -139,7 +139,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/6e171302302384950346765715871408/Product/33131/png/1000",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/05/80/LD0006058085.jpg",
     "memory_slots": 4
   },
   {
@@ -150,7 +150,7 @@
     "socket": "AM5",
     "form_factor": "Mini ITX",
     "max_memory": 128,
-    "imageUrl": "https://www.asrock.com/mb/photo/B850I%20Lightning%20WiFi(L1).png",
+    "imageUrl": "https://pg.asrock.com/mb/features/heroMB-B850I+Lightning+WiFi.png",
     "memory_slots": 2
   },
   {
@@ -161,7 +161,7 @@
     "socket": "LGA1700",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "https://vsn.msi.com/picture/image/front-m.png",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/03/38/LD0006033811.jpg",
     "memory_slots": 4
   },
   {
@@ -172,7 +172,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "https://vsn.msi.com/picture/image/front-m.png",
+    "imageUrl": "https://m.media-amazon.com/images/I/71Mumt38AtL._AC_SL1280_.jpg",
     "memory_slots": 4
   },
   {
@@ -183,7 +183,7 @@
     "socket": "LGA1700",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "https://vsn.msi.com/picture/image/front-m.png",
+    "imageUrl": "https://m.media-amazon.com/images/I/81PagkRvhwL._AC_SL1500_.jpg",
     "memory_slots": 4
   },
   {
@@ -194,7 +194,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/49673C30-47F1-4F42-832B-866418386370/with_alpha/rw600",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/98/60/LD0005986057.jpg",
     "memory_slots": 4
   },
   {
@@ -205,7 +205,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/16db7383681604924511598167389862/Product/41511/png/1000",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/17/43/LD0006174388.jpg",
     "memory_slots": 4
   },
   {
@@ -216,7 +216,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/2e90f209598286993175853763266835/Product/41561/png/1000",
+    "imageUrl": "https://m.media-amazon.com/images/I/81OtLGxXwFL._AC_.jpg",
     "memory_slots": 4
   },
   {
@@ -227,7 +227,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/B550M/PRO-VDH-WIFI/overview.png",
     "memory_slots": 4
   },
   {
@@ -238,7 +238,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/c90a2a18-b20d-4a21-9bbf-d4723b7a144e/v1/img/spec/cooling.png",
     "memory_slots": 4
   },
   {
@@ -249,7 +249,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://www.asrock.com/mb/features/heroMB-B850M-X+WiFi+R2.0.png",
     "memory_slots": 4
   },
   {
@@ -260,7 +260,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/20/14/LD0006201492.jpg",
     "memory_slots": 4
   },
   {
@@ -271,7 +271,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/B850/b850-tomahawk-max-wifi/mag-b850-tomahawk-max-wifi-kv.png",
     "memory_slots": 4
   },
   {
@@ -282,7 +282,7 @@
     "socket": "LGA1700",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/68bcc202133a0f4523963085836736d1/Product/46631/Png",
     "memory_slots": 4
   },
   {
@@ -293,7 +293,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/3151EBBB-8450-43F6-9994-D7E5E6A9D0E5/v1/img/kv/ROG-Strix-B650-A-Gaming.png",
     "memory_slots": 4
   },
   {
@@ -304,7 +304,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/1da83cb1781a28ac61bc0cee95f34c62/Product/46611/Png",
     "memory_slots": 4
   },
   {
@@ -315,7 +315,7 @@
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/97/49/LD0005974964.jpg",
     "memory_slots": 4
   },
   {
@@ -326,7 +326,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/7b2d3d3e-a04d-4215-96e5-272d9e078bff.jpg",
     "memory_slots": 4
   },
   {
@@ -337,7 +337,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/12/90/LD0006129082.jpg",
     "memory_slots": 4
   },
   {
@@ -348,7 +348,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/c0f2a55e-fee6-48db-9ff6-764135a83e3b/v1/img/spec/connectivity.png",
     "memory_slots": 4
   },
   {
@@ -359,7 +359,7 @@
     "socket": "AM5",
     "form_factor": "Mini ITX",
     "max_memory": 96,
-    "imageUrl": "",
+    "imageUrl": "https://d2po40yubr0dlz.cloudfront.net/images/products/vuugo-asrock-A620I_LIGHTNING_WIFI.png",
     "memory_slots": 2
   },
   {
@@ -370,7 +370,7 @@
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://manuals.plus/wp-content/uploads/2022/05/img_62923d048de3e.png",
     "memory_slots": 4
   },
   {
@@ -381,7 +381,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/be88749c-b61d-4f9f-b52f-558eae917aae/",
     "memory_slots": 4
   },
   {
@@ -392,7 +392,7 @@
     "socket": "LGA1700",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://www.bhphotovideo.com/images/images1500x1500/gigabyte_z790_eagle_ax_motherboard_1812260.jpg",
     "memory_slots": 4
   },
   {
@@ -403,7 +403,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 64,
-    "imageUrl": "",
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_1689067222ab873fff46e1877ef5c68ea02e9b42d9.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
     "memory_slots": 4
   },
   {
@@ -414,7 +414,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/05/18/LD0006051853.jpg",
     "memory_slots": 4
   },
   {
@@ -425,7 +425,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://asrock.com/mb/amd/b450mac+r2.0/photo/B450Mac+R2.0(L2).png",
     "memory_slots": 4
   },
   {
@@ -436,7 +436,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/20/08/LD0006200858.jpg",
     "memory_slots": 4
   },
   {
@@ -447,7 +447,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 64,
-    "imageUrl": "",
+    "imageUrl": "https://www.asrock.com/mb/photo/B450M-HDV+R4.0(M3).png",
     "memory_slots": 4
   },
   {
@@ -458,7 +458,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://c1.neweggimages.com/BizIntell/item/MB/Motherboards+-+AMD/13-145-544/26.png",
     "memory_slots": 4
   },
   {
@@ -469,7 +469,7 @@
     "socket": "LGA1700",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/81RIHQWym4L._AC_SL1500_.jpg",
     "memory_slots": 4
   },
   {
@@ -480,7 +480,7 @@
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/A9730D0E-D1A6-40C1-9282-F1BA1B13BFB4/v1/img/kv/ROG-Strix-B550-F-II.png",
     "memory_slots": 4
   },
   {
@@ -491,7 +491,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/04630cdbe40aa65fe09ccc138fdcbd90/Product/46852/Png",
     "memory_slots": 4
   },
   {
@@ -502,7 +502,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/17/07/LD0006170742.jpg",
     "memory_slots": 4
   },
   {
@@ -513,7 +513,7 @@
     "socket": "AM4",
     "form_factor": "Mini ITX",
     "max_memory": 64,
-    "imageUrl": "",
+    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/cdcbe06346078ee4cacaa3ba71a2f08c/Product/25811",
     "memory_slots": 2
   },
   {
@@ -524,7 +524,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/a43d7c67da4e2d7578c9d55f617dbaca/Product/34369/Png",
     "memory_slots": 4
   },
   {
@@ -535,7 +535,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://www.asrock.com/mb/photo/B850M+Pro-A+WiFi(L2).png",
     "memory_slots": 4
   },
   {
@@ -546,7 +546,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://pg.asrock.com/mb/photo/B650M+PG+Lightning+WiFi(L3).png",
     "memory_slots": 4
   },
   {
@@ -557,7 +557,7 @@
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/91oChAepmRL._AC_SL1500_.jpg",
     "memory_slots": 4
   },
   {
@@ -568,7 +568,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 64,
-    "imageUrl": "",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/A520M/A-520m-Pro/a520m-a-pro.png",
     "memory_slots": 4
   },
   {
@@ -579,7 +579,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/81UCyHa+BKL._AC_SL1500_.jpg",
     "memory_slots": 4
   },
   {
@@ -590,7 +590,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/398D9060-E4B9-4A5E-B3AC-53FE4DC9144E/v1/img/kv/ROG-Strix-B650E-F-Gaming.png",
     "memory_slots": 4
   },
   {
@@ -601,7 +601,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/d6a08c43-8d58-4fc9-9e7d-54031d07acb5/v1/img/spec/connectivity.png",
     "memory_slots": 4
   },
   {
@@ -612,7 +612,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://motherboarddb.com/media/images/Asrock/B550M+Pro4/B550M_Pro4-1.png",
     "memory_slots": 4
   },
   {
@@ -623,7 +623,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://www.bhphotovideo.com/images/images2500x2500/msi_x670etmahawifi_mag_x670e_tomahawk_wifi_1771748.jpg",
     "memory_slots": 4
   },
   {
@@ -634,7 +634,7 @@
     "socket": "AM5",
     "form_factor": "Mini ITX",
     "max_memory": 96,
-    "imageUrl": "",
+    "imageUrl": "https://files.pccasegear.com/images/ROG-STRIX-B850-I-GAMING-WIFI-add2.jpg",
     "memory_slots": 2
   },
   {
@@ -645,7 +645,7 @@
     "socket": "AM5",
     "form_factor": "Mini ITX",
     "max_memory": 96,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/42CF69C2-D16A-449F-A113-E7AB3C57AEE7/v1/img/spec/connectivity.png",
     "memory_slots": 2
   },
   {
@@ -656,7 +656,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/X870/mpg-x870e-carbon-wifi/mpg_x870e_carbon_wifi-block02.png",
     "memory_slots": 4
   },
   {
@@ -667,7 +667,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/3882/innergigabyte/images/product/hero.png",
     "memory_slots": 4
   },
   {
@@ -678,7 +678,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://m.media-amazon.com/images/I/81gwXriq5PL._AC_SL1500_.jpg",
     "memory_slots": 4
   },
   {
@@ -689,7 +689,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/074e8ea2-05b9-4f74-bee4-fa2ad2e81c21/V1/img/spec/spec-gaming.webp",
     "memory_slots": 4
   },
   {
@@ -700,7 +700,7 @@
     "socket": "LGA1700",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/98/63/LD0005986362.jpg",
     "memory_slots": 4
   },
   {
@@ -711,7 +711,7 @@
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://files.pccasegear.com/UserFiles/B550-A-PRO-prod1.jpg",
     "memory_slots": 4
   },
   {
@@ -722,7 +722,7 @@
     "socket": "AM5",
     "form_factor": "EATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/24/32/LD0006243290.jpg",
     "memory_slots": 8
   },
   {
@@ -733,7 +733,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://www.asrock.com/mb/photo/B850M+Pro+RS+WiFi(L2).png",
     "memory_slots": 4
   },
   {
@@ -744,7 +744,7 @@
     "socket": "LGA1700",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/gain/88be6c4e-815d-4341-9c91-731d9dfabdb5/",
     "memory_slots": 4
   },
   {
@@ -755,7 +755,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/3760/innergigabyte/images/product/summary.png",
     "memory_slots": 4
   },
   {
@@ -766,7 +766,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://files.pccasegear.com/UserFiles/B650-AORUS-ELITE-AX-gigabyte-b650-aorus-elite-ax-ddr5-motherboard-product1.jpg",
     "memory_slots": 4
   },
   {
@@ -777,7 +777,7 @@
     "socket": "AM5",
     "form_factor": "Mini ITX",
     "max_memory": 96,
-    "imageUrl": "",
+    "imageUrl": "https://www.bhphotovideo.com/images/images1000x1000/gigabyte_a620i_ax_g10_motherboard_1781438.jpg",
     "memory_slots": 2
   },
   {
@@ -788,7 +788,7 @@
     "socket": "AM5",
     "form_factor": "Mini ITX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/3797/innergigabyte/images/product/summary.png",
     "memory_slots": 2
   },
   {
@@ -799,7 +799,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/19/44/LD0006194408.jpg",
     "memory_slots": 4
   },
   {
@@ -810,7 +810,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/8e23bd7f-41d6-4ca8-bf39-de8fa4eafbe8/v1/img/kv/pd.png",
     "memory_slots": 4
   },
   {
@@ -821,7 +821,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://c1.neweggimages.com/BizIntell/item/MB/Motherboards+-+AMD/13-162-166a/42.png",
     "memory_slots": 4
   },
   {
@@ -832,7 +832,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 96,
-    "imageUrl": "",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/A620M/PRO-A620M-E/images/gen4.png",
     "memory_slots": 4
   },
   {
@@ -843,7 +843,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/79cbd1a8-e3d3-4b2a-af49-7522f3f494c6/V1/img/kv-main.png",
     "memory_slots": 4
   },
   {
@@ -854,7 +854,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/20/13/LD0006201395.jpg",
     "memory_slots": 4
   },
   {
@@ -865,7 +865,7 @@
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/74/39/LD0005743986_1.jpg",
     "memory_slots": 4
   },
   {
@@ -876,7 +876,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 96,
-    "imageUrl": "",
+    "imageUrl": "https://www.asrock.com/mb/photo/B650M-HDVM.2(L2).png",
     "memory_slots": 4
   },
   {
@@ -887,7 +887,7 @@
     "socket": "LGA1700",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://c1.neweggimages.com/productimage/nb1280/13-119-679-10.png",
     "memory_slots": 4
   },
   {
@@ -898,7 +898,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/X870/mag-x870e-tomahawk-wifi/frozr/msi-x870e-tomahawk-wifi-frozr-sync.png",
     "memory_slots": 4
   },
   {
@@ -909,7 +909,7 @@
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/Keyfeature/3907/innergigabyte/images/product/summary.png",
     "memory_slots": 4
   },
   {
@@ -920,7 +920,7 @@
     "socket": "LGA1700",
     "form_factor": "Micro ATX",
     "max_memory": 64,
-    "imageUrl": "",
+    "imageUrl": "https://asset.msi.com/resize/image/global/product/product_1653874089f558c1be9da2ebf31bfe259c09522b11.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
     "memory_slots": 4
   },
   {
@@ -931,7 +931,7 @@
     "socket": "AM5",
     "form_factor": "EATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/X870EGODLIKE/images/mb-godlike-01.png",
     "memory_slots": 8
   },
   {
@@ -942,7 +942,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://c1.neweggimages.com/productimage/nb1280/13-162-167-02.png",
     "memory_slots": 4
   },
   {
@@ -953,7 +953,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://www.gigabyte.com/FileUpload/Global/KeyFeature/3826/innergigabyte/images/product/hero.png",
     "memory_slots": 4
   },
   {
@@ -964,7 +964,7 @@
     "socket": "LGA1700",
     "form_factor": "Micro ATX",
     "max_memory": 96,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/00/33/LD0006003322.jpg",
     "memory_slots": 4
   },
   {
@@ -975,7 +975,7 @@
     "socket": "sTRX4",
     "form_factor": "XL ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/97ec1094dff9970816fe8b480de2713d/Product/24046/png/500",
     "memory_slots": 4
   },
   {
@@ -986,7 +986,7 @@
     "socket": "AM4",
     "form_factor": "Micro ATX",
     "max_memory": 64,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/05/70/87/LD0005708781_1.jpg",
     "memory_slots": 4
   },
   {
@@ -997,7 +997,7 @@
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://motherboarddb.com/media/images/Asrock/B550+Phantom+Gaming+4-ac/B550_Phantom_Gaming_4-ac-5.png",
     "memory_slots": 4
   },
   {
@@ -1008,7 +1008,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://static.gigabyte.com/StaticFile/Image/Global/e7990410d05341c23edea622a05fa58d/Product/42383/Png",
     "memory_slots": 4
   },
   {
@@ -1019,7 +1019,7 @@
     "socket": "LGA1700",
     "form_factor": "Mini ITX",
     "max_memory": 96,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/00/32/LD0006003200.jpg",
     "memory_slots": 2
   },
   {
@@ -1030,7 +1030,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/20/53/LD0006205337.jpg",
     "memory_slots": 4
   },
   {
@@ -1041,7 +1041,7 @@
     "socket": "AM5",
     "form_factor": "Micro ATX",
     "max_memory": 96,
-    "imageUrl": "",
+    "imageUrl": "https://media.ldlc.com/r1600/ld/products/00/06/03/41/LD0006034175.jpg",
     "memory_slots": 4
   },
   {
@@ -1052,7 +1052,7 @@
     "socket": "LGA1851",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://storage-asset.msi.com/global/picture/image/feature/mb/z890/MAG-z890-tomahawk-wifi/hero/msi-z870-tomahake-hero-exclusive-new.png",
     "memory_slots": 4
   },
   {
@@ -1063,7 +1063,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://mediawebimg.asus.com/files/media/63ee8486-836b-4abf-a8d7-32bf7c9ad50b/v1/img/spec/cooling_m.png",
     "memory_slots": 4
   },
   {
@@ -1074,7 +1074,7 @@
     "socket": "AM5",
     "form_factor": "ATX",
     "max_memory": 256,
-    "imageUrl": "",
+    "imageUrl": "https://pg.asrock.com/mb/photo/B650+PG+Lightning(L2).png",
     "memory_slots": 4
   },
   {
@@ -1085,7 +1085,7 @@
     "socket": "AM4",
     "form_factor": "ATX",
     "max_memory": 128,
-    "imageUrl": "",
+    "imageUrl": "https://www.falconcomputers.co.uk/media/product/85793/0/0/msi-mag-b550-tomahawk-amd-socket-am4-motherboard.jpg?",
     "memory_slots": 4
   },
   {
@@ -1096,7 +1096,7 @@
     "socket": "LGA1700",
     "form_factor": "ATX",
     "max_memory": 192,
-    "imageUrl": "",
+    "imageUrl": "https://www.bhphotovideo.com/images/images2500x2500/msi_b760tamawifi_mag_b760_tomahawk_wifi_1746345.jpg",
     "memory_slots": 4
   }
 ]

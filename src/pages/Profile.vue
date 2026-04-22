@@ -1,11 +1,13 @@
 <template>
   <div
     :class="[
-      'min-h-200 sm:p-6 md:p-8 flex flex-col items-center justify-center transition-colors duration-400',
+      'min-h-screen p-4 sm:p-6 md:p-8 pt-20 sm:pt-28 md:pt-40 flex flex-col items-center transition-colors duration-400',
       isDark ? 'bg-neutral-900' : 'bg-neutral-200',
     ]"
   >
-    <div class="flex absolute top-40 left-10 p-2 gap-2 w-full max-w-4xl">
+    <div
+      class="flex absolute top-4 sm:top-6 md:top-10 left-3 sm:left-6 md:left-10 p-2 gap-2 items-center"
+    >
       <router-link
         to="/"
         :class="[
@@ -30,7 +32,7 @@
       </router-link>
       <h1
         :class="[
-          'text-3xl pt-1 md:text-4xl uppercase tracking-wider',
+          'text-xl sm:text-2xl md:text-4xl uppercase tracking-wider',
           isDark ? 'text-neutral-500' : 'text-neutral-600',
         ]"
       >
@@ -40,7 +42,7 @@
 
     <div
       :class="[
-        'w-full max-w-5xl p-6 md:p-10 rounded-xl shadow-2xl transition-colors duration-300 border-2',
+        'w-full max-w-5xl p-4 sm:p-6 md:p-10 rounded-xl shadow-2xl transition-colors duration-300 border-2',
         isDark ? 'bg-neutral-800 border-pink-600' : 'bg-white border-lime-500',
       ]"
     >
@@ -108,7 +110,7 @@
             Личные данные
           </h2>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div class="flex flex-col gap-1">
               <label :class="['text-sm font-semibold', isDark ? 'text-gray-400' : 'text-gray-600']"
                 >Email адрес</label
@@ -212,15 +214,15 @@
 
           <div
             :class="[
-              'mt-6 flex flex-col max-h-60 max-w-250 gap-4 pr-2 pl-2 overflow-y-auto overscroll-none custom-scrollbar',
+              'mt-4 sm:mt-6 flex flex-col max-h-60 w-full gap-4 pr-2 pl-2 overflow-y-auto overscroll-none custom-scrollbar',
               isDark ? 'scrollbar-dark' : 'scrollbar-light',
             ]"
           >
             <div
               v-if="orders.length === 0 && !isLoadingOrders"
               class="text-center py-10 opacity-50 font-medium"
-            :class="['', isDark ? 'text-neutral-200' : 'text-neutral-600']"
-              >
+              :class="['', isDark ? 'text-neutral-200' : 'text-neutral-600']"
+            >
               У вас пока нет совершенных заказов
             </div>
 
@@ -251,7 +253,7 @@
                 <div class="text-right">
                   <p class="text-sm opacity-60">Сумма</p>
                   <p :class="['text-xl font-black', isDark ? 'text-pink-500' : 'text-lime-600']">
-                    {{ order.totalPrice.toLocaleString() }} ₽
+                    {{ (order.totalPrice ?? 0).toLocaleString() }} ₽
                   </p>
                 </div>
                 <div
@@ -300,11 +302,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, inject, watch } from 'vue'
+import { ref, onMounted, onBeforeUnmount, inject, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { auth, db } from '../main'
 import { onAuthStateChanged, signOut, updateProfile, sendEmailVerification } from 'firebase/auth'
-import { collection, query, where, getDocs } from 'firebase/firestore'
+import type { Unsubscribe } from 'firebase/auth'
+import { collection, query, where, getDocs, Timestamp } from 'firebase/firestore'
 
 const isDark = (inject('theme') as any)?.isDark
 const router = useRouter()
@@ -319,35 +322,34 @@ const fileInput = ref<HTMLInputElement | null>(null)
 const orders = ref<any[]>([])
 const isLoadingOrders = ref(true)
 
+let unsubscribeAuth: Unsubscribe | null = null
+
 const handleVerifyEmail = async () => {
-  if (auth.currentUser) {
-    // 1. Логируем начало процесса и текущий email пользователя
-    console.log('Попытка отправки письма на:', auth.currentUser.email)
-    console.log(
-      'Текущий статус верификации в объекте пользователя:',
-      auth.currentUser.emailVerified,
-    )
-
-    try {
-      await sendEmailVerification(auth.currentUser)
-      verificationSent.value = true
-      alert('Ссылка для подтверждения отправлена на вашу почту!')
-      console.log('Результат: Запрос на отправку успешно принят Firebase')
-    } catch (err: any) {
-      // 2. Логируем подробную ошибку
-      console.error('ОШИБКА ПРИ ОТПРАВКЕ ПИСЬМА:')
-      console.error('Код ошибки:', err.code)
-      console.error('Сообщение:', err.message)
-
-      if (err.code === 'auth/too-many-requests') {
-        alert('Слишком много запросов. Попробуйте позже.')
-      } else if (err.code === 'auth/user-token-expired') {
-        alert('Сессия устарела. Пожалуйста, перезайдите в аккаунт.')
-      }
+  if (!auth.currentUser) return
+  try {
+    await sendEmailVerification(auth.currentUser)
+    verificationSent.value = true
+    alert('Ссылка для подтверждения отправлена на вашу почту!')
+  } catch (err: any) {
+    console.error('Ошибка отправки письма верификации:', err.code)
+    if (err.code === 'auth/too-many-requests') {
+      alert('Слишком много запросов. Попробуйте позже.')
+    } else if (err.code === 'auth/user-token-expired') {
+      alert('Сессия устарела. Пожалуйста, перезайдите в аккаунт.')
+    } else {
+      alert('Не удалось отправить письмо. Попробуйте позже.')
     }
-  } else {
-    console.warn('Предупреждение: Попытка верификации, но auth.currentUser пуст (null)')
   }
+}
+
+const toMillis = (value: any): number => {
+  if (!value) return 0
+  if (value instanceof Timestamp) return value.toMillis()
+  if (typeof value?.toMillis === 'function') return value.toMillis()
+  if (typeof value?.seconds === 'number') return value.seconds * 1000
+  const d = new Date(value)
+  const t = d.getTime()
+  return isNaN(t) ? 0 : t
 }
 
 const fetchOrders = async () => {
@@ -359,7 +361,7 @@ const fetchOrders = async () => {
 
     orders.value = querySnapshot.docs
       .map((doc) => ({ id: doc.id, ...doc.data() }))
-      .sort((a: any, b: any) => b.createdAt - a.createdAt)
+      .sort((a: any, b: any) => toMillis(b.createdAt) - toMillis(a.createdAt))
   } catch (err) {
     console.error('Firestore Error:', err)
   } finally {
@@ -368,19 +370,12 @@ const fetchOrders = async () => {
 }
 
 const checkUserStatus = () => {
-  onAuthStateChanged(auth, (user) => {
+  unsubscribeAuth = onAuthStateChanged(auth, (user) => {
     if (user) {
-      // 3. Логируем данные при входе/обновлении
-      console.log('Пользователь авторизован:', {
-        uid: user.uid,
-        email: user.email,
-        isVerified: user.emailVerified,
-      })
-
       userEmail.value = user.email || ''
       userUid.value = user.uid
-      isEmailVerified.value = user.emailVerified // Убедись, что эта строка есть
-      userPhoto.value = user.photoURL || localStorage.getItem('user_avatar')
+      isEmailVerified.value = user.emailVerified
+      userPhoto.value = localStorage.getItem('user_avatar') || user.photoURL || null
 
       if (user.metadata.creationTime) {
         registrationDate.value = new Date(user.metadata.creationTime).toLocaleDateString('ru-RU', {
@@ -390,7 +385,6 @@ const checkUserStatus = () => {
         })
       }
     } else {
-      console.log('Пользователь не авторизован, редирект...')
       router.push('/reg')
     }
   })
@@ -398,18 +392,51 @@ const checkUserStatus = () => {
 
 const triggerFileInput = () => fileInput.value?.click()
 
+const MAX_AVATAR_BYTES = 200 * 1024 // 200 КБ — чтобы base64 не превышал лимит Auth (~2 КБ URL слишком мал, хранение только локально)
+const AUTH_PHOTO_URL_LIMIT = 2048
+
 const handleFileChange = (event: Event) => {
-  const file = (event.target as HTMLInputElement).files?.[0]
+  const target = event.target as HTMLInputElement
+  const file = target.files?.[0]
   if (!file) return
 
-  if (file.size > 500000) return alert('Файл слишком большой (макс. 500 КБ)')
+  if (!file.type.startsWith('image/')) {
+    alert('Можно загрузить только изображение.')
+    target.value = ''
+    return
+  }
+
+  if (file.size > MAX_AVATAR_BYTES) {
+    alert('Файл слишком большой (макс. 200 КБ).')
+    target.value = ''
+    return
+  }
 
   const reader = new FileReader()
   reader.onload = async (e) => {
-    const base64 = e.target?.result as string
-    userPhoto.value = base64
-    localStorage.setItem('user_avatar', base64)
-    if (auth.currentUser) await updateProfile(auth.currentUser, { photoURL: base64 })
+    try {
+      const base64 = e.target?.result as string
+      userPhoto.value = base64
+      try {
+        localStorage.setItem('user_avatar', base64)
+      } catch (storageErr) {
+        console.warn('Не удалось сохранить аватар в localStorage:', storageErr)
+      }
+      // Firebase Auth photoURL имеет лимит ~2048 символов, поэтому туда пишем только короткие URL.
+      if (auth.currentUser && base64.length <= AUTH_PHOTO_URL_LIMIT) {
+        await updateProfile(auth.currentUser, { photoURL: base64 })
+      }
+    } catch (err) {
+      console.error('Не удалось обновить аватар:', err)
+      alert('Не удалось сохранить аватар.')
+    } finally {
+      target.value = ''
+    }
+  }
+  reader.onerror = () => {
+    console.error('Ошибка чтения файла')
+    alert('Не удалось прочитать файл.')
+    target.value = ''
   }
   reader.readAsDataURL(file)
 }
@@ -423,6 +450,9 @@ const handleLogout = async () => {
 
 watch(userUid, (uid) => uid && fetchOrders())
 onMounted(checkUserStatus)
+onBeforeUnmount(() => {
+  if (unsubscribeAuth) unsubscribeAuth()
+})
 </script>
 
 <style scoped>

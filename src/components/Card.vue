@@ -17,7 +17,6 @@ interface Props {
   isAdded?: boolean
   onClickFavorite?: () => void // Уточняем, что это функция
   onClickAdd?: () => void
-  
 }
 
 const props = defineProps<Props>()
@@ -27,10 +26,10 @@ const router = useRouter()
 const goToProduct = () => {
   if (props.id && props.category) {
     const cleanCategory = props.category.toLowerCase()
-    
+
     // Определяем папку для роутинга
     let catFolder = ''
-    
+
     if (cleanCategory.includes('проц')) {
       catFolder = 'cpu'
     } else if (cleanCategory.includes('видеокар')) {
@@ -51,7 +50,7 @@ const goToProduct = () => {
     <div
       @click="goToProduct"
       :class="[
-        'relative rounded-3xl p-8 cursor-pointer shadow-xl transition-all duration-300 ease-in-out transform',
+        'relative rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 cursor-pointer shadow-xl transition-all duration-300 ease-in-out transform',
         'group-hover:-translate-y-2 group-hover:shadow-2xl border-1',
         'will-change-transform backface-hidden',
         isDark ? 'bg-neutral-800 border-pink-600/20' : 'bg-white border-lime-600/20',
@@ -64,7 +63,7 @@ const goToProduct = () => {
           stroke-width="1.5"
           stroke="currentColor"
           :class="[
-            'w-9 h-9 cursor-pointer duration-300 transition-all',
+            'w-7 h-7 sm:w-9 sm:h-9 cursor-pointer duration-300 transition-all',
             isFavorite ? 'fill-current' : 'fill-none',
             isDark
               ? isFavorite
@@ -86,25 +85,38 @@ const goToProduct = () => {
       <img
         :src="props.imageUrl"
         alt="Product Image"
-        class="rounded-3xl justify-self-center h-70 w-90 object-contain mx-auto"
+        loading="lazy"
+        class="rounded-2xl sm:rounded-3xl justify-self-center h-40 sm:h-56 md:h-64 lg:h-70 w-full max-w-[360px] object-contain mx-auto"
       />
 
       <p
         :class="[
-          'text-xl font-semibold mt-4 transition-colors',
+          'text-base sm:text-lg md:text-xl font-semibold mt-3 sm:mt-4 transition-colors line-clamp-2 min-h-[2.5em]',
           isDark ? 'text-pink-500' : 'text-lime-500',
         ]"
       >
         {{ title }}
       </p>
 
-      <div class="flex justify-between items-center pt-4">
-        <div class="flex flex-col">
-          <span :class="['text-sm', isDark ? 'text-gray-400' : 'text-slate-400']">Цена:</span>
-          <b :class="['text-xl', isDark ? 'text-white' : 'text-slate-700']">{{ price }} руб.</b>
+      <div class="flex justify-between items-center pt-3 sm:pt-4 gap-2">
+        <div class="flex flex-col min-w-0">
+          <span :class="['text-xs sm:text-sm', isDark ? 'text-gray-400' : 'text-slate-400']"
+            >Цена:</span
+          >
+          <b
+            :class="[
+              'text-base sm:text-lg md:text-xl truncate',
+              isDark ? 'text-white' : 'text-slate-700',
+            ]"
+            >{{ price }} руб.</b
+          >
         </div>
 
-        <div v-if="props.onClickAdd" @click.stop="props.onClickAdd()" class="relative group">
+        <div
+          v-if="props.onClickAdd"
+          @click.stop="props.onClickAdd()"
+          class="relative group shrink-0"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -112,7 +124,7 @@ const goToProduct = () => {
             stroke-width="1.8"
             stroke="currentColor"
             :class="[
-              'w-11 h-11 p-2 rounded-full cursor-pointer duration-300 ease-in-out shadow-md',
+              'w-9 h-9 sm:w-11 sm:h-11 p-2 rounded-full cursor-pointer duration-300 ease-in-out shadow-md',
               isDark
                 ? isAdded
                   ? 'bg-neutral-800 border-1 border-pink-500 text-pink-500 shadow-pink-700/50'

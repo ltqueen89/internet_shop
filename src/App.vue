@@ -40,9 +40,15 @@ provide('theme', {
   toggleTheme,
 })
 
-const savedCart = localStorage.getItem('cart')
-if (savedCart) {
-  cart.value = JSON.parse(savedCart)
+try {
+  const savedCart = localStorage.getItem('cart')
+  if (savedCart && savedCart !== 'undefined') {
+    const parsed = JSON.parse(savedCart)
+    if (Array.isArray(parsed)) cart.value = parsed
+  }
+} catch (err) {
+  console.error('Не удалось восстановить корзину из localStorage:', err)
+  localStorage.removeItem('cart')
 }
 
 const totalPrice = computed(() => cart.value.reduce((acc, item) => acc + item.price, 0))
@@ -57,14 +63,9 @@ const openDrawer = () => {
 }
 
 const removeFromCart = (item) => {
-
   const index = cart.value.findIndex((cartItem) => cartItem.id === item.id)
-
   if (index > -1) {
     cart.value.splice(index, 1)
-
-    const mainItem = items.value.find((i) => i.id === item.id)
-    if (mainItem) mainItem.isAdded = false
   }
 }
 
@@ -72,7 +73,6 @@ const addToCart = (item) => {
   const index = cart.value.findIndex((i) => i.id === item.id)
   if (index === -1) {
     cart.value.push(item)
-    item.isAdded = true
   }
 }
 

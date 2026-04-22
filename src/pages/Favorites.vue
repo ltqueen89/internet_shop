@@ -28,17 +28,40 @@ const mapFavorites = (items) => {
   }))
 }
 
+// Удаление товара из избранного
+const onClickRemoveFavorite = async (item) => {
+  if (!item?.favoriteId) {
+    favorites.value = favorites.value.filter((f) => f.id !== item.id)
+    return
+  }
+  const prev = favorites.value
+  favorites.value = favorites.value.filter((f) => f.id !== item.id)
+  try {
+    await axios.delete(`https://d34e000f87467eb3.mokky.dev/favorites/${item.favoriteId}`)
+  } catch (err) {
+    console.error('Не удалось удалить из избранного:', err)
+    favorites.value = prev
+  }
+}
+
 onMounted(async () => {
   try {
     const { data } = await axios.get(
       'https://d34e000f87467eb3.mokky.dev/favorites?_relations=items',
     )
 
-    // Превращаем массив связей в массив объектов товаров и помечаем те, что в корзине
-    const items = data.map((obj) => obj.item)
+    // Превращаем массив связей в массив объектов товаров и помечаем те, что в корзине.
+    // Фильтруем записи, у которых связанный товар был удалён.
+    const items = data
+      .filter((obj) => obj && obj.item)
+      .map((obj) => ({
+        ...obj.item,
+        favoriteId: obj.id,
+        isFavorite: true,
+      }))
     favorites.value = mapFavorites(items)
   } catch (err) {
-    console.log(err)
+    console.error('Не удалось загрузить избранное:', err)
   }
 })
 
@@ -64,6 +87,11 @@ watch(
   </h1>
 
   <div class="px-10 mt-10">
-    <CardList :items="favorites" is-favorites @add-to-cart="onClickAddPlus" />
+    <CardList
+      :items="favorites"
+      is-favorites
+      @add-to-cart="onClickAddPlus"
+      @add-to-favorite="onClickRemoveFavorite"
+    />
   </div>
 </template>

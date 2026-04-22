@@ -3,17 +3,14 @@ import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
-import Headerr from './components/Headerr.vue'
 import Registrations from './pages/Registrations.vue'
 import Home from './pages/Home.vue'
 import Favorites from './pages/Favorites.vue'
 import { initializeApp } from 'firebase/app'
 import Profile from './pages/Profile.vue'
-import { getAnalytics } from 'firebase/analytics'
-import { getAuth } from 'firebase/auth' // Добавьте этот импорт
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import { getFirestore } from 'firebase/firestore'
-// ... ваш firebaseConfig ...
-import CardInfo from './components/CardInfo.vue' // Проверь, чтобы путь был верным
+import CardInfo from './components/CardInfo.vue'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCEC0FepihNhfvnNLpIe1CCD7OLEhD9dBs',
@@ -26,15 +23,20 @@ const firebaseConfig = {
 }
 
 const firebaseApp = initializeApp(firebaseConfig)
-export const auth = getAuth(firebaseApp) // Экспортируйте auth для использования в компонентах
-// 2. Создаем Vue приложение (называем переменную vueApp, чтобы не путаться)
-const vueApp = createApp(App)
+export const auth = getAuth(firebaseApp)
 export const db = getFirestore(firebaseApp)
+
+const vueApp = createApp(App)
+
 const routes = [
   { path: '/', name: 'Home', component: Home },
   { path: '/favorites', name: 'Favorites', component: Favorites },
-  { path: '/header', name: 'Header', component: Headerr },
-  { path: '/profile', name: 'Profile', component: Profile },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile,
+    meta: { requiresAuth: true },
+  },
   { path: '/reg', name: 'register', component: Registrations },
   { path: '/product/:category/:id', name: 'ProductDetails', component: CardInfo },
 ]
@@ -44,8 +46,33 @@ const router = createRouter({
   routes,
 })
 
+// Дожидаемся первой проверки авторизации Firebase, чтобы route guard
+// не редиректил пользователя до того, как Firebase восстановит сессию.
+const getCurrentUser = () =>
+  new Promise((resolve) => {
+    const unsubscribe = onAuthStateChanged(
+      auth,
+      (user) => {
+        unsubscribe()
+        resolve(user)
+      },
+      () => {
+        unsubscribe()
+        resolve(null)
+      },
+    )
+  })
+
+router.beforeEach(async (to) => {
+  if (to.meta?.requiresAuth) {
+    const user = await getCurrentUser()
+    if (!user) {
+      return { path: '/reg', query: { redirect: to.fullPath } }
+    }
+  }
+  return true
+})
+
 vueApp.use(router)
 vueApp.use(autoAnimatePlugin)
 vueApp.mount('#app')
-
-export default router
