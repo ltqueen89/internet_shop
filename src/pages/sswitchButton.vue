@@ -3,7 +3,7 @@
     <svg
       :class="[
         'h-10 switch-mode hover:scale-120 transition duration-300',
-        isDark ? 'stroke-pink-500' : 'stroke-lime-500',
+        isDark ? 'stroke-pink-500' : 'stroke-indigo-500',
       ]"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

@@ -32,7 +32,7 @@ const { isDark, toggleTheme } = inject('theme')
     <div
       :class="[
         'flex flex-wrap rounded-b-3xl shadow-2xl pt-4 sm:pt-6 md:pt-10 pb-6 sm:pb-8 md:pb-12 justify-between items-center px-3 sm:px-6 md:px-10 gap-3 transition-colors duration-400',
-        isDark ? 'bg-neutral-800' : 'bg-lime-300',
+        isDark ? 'bg-neutral-800' : 'bg-indigo-100',
       ]"
     >
       <div
@@ -47,7 +47,7 @@ const { isDark, toggleTheme } = inject('theme')
           stroke="currentColor"
           :class="[
             'h-12 sm:h-16 md:h-20 duration-400',
-            isDark ? 'stroke-pink-500' : 'stroke-lime-500',
+            isDark ? 'stroke-pink-500' : 'stroke-indigo-500',
           ]"
         >
           <path
@@ -59,7 +59,7 @@ const { isDark, toggleTheme } = inject('theme')
         <h2
           :class="[
             'text-base sm:text-lg md:text-xl uppercase font-bold whitespace-nowrap',
-            isDark ? 'text-pink-500' : 'text-lime-600',
+            isDark ? 'text-pink-500' : 'text-indigo-600',
           ]"
         >
           Queen pc
@@ -78,7 +78,7 @@ const { isDark, toggleTheme } = inject('theme')
               'h-10 sm:h-12 px-3 sm:px-4 text-sm sm:text-base md:text-lg hover:scale-105 duration-300 shadow-lg gap-2 cursor-pointer flex items-center rounded-xl transition-all',
               isDark
                 ? 'bg-neutral-900 text-pink-500 hover:bg-neutral-600'
-                : 'bg-white text-lime-500 hover:bg-gray-50',
+                : 'bg-white text-indigo-500 hover:bg-gray-50',
             ]"
           >
             <span class="hidden sm:inline">Корзина</span>
@@ -104,7 +104,7 @@ const { isDark, toggleTheme } = inject('theme')
                 'h-10 sm:h-12 px-3 sm:px-4 text-sm sm:text-base md:text-lg hover:scale-105 duration-300 shadow-lg gap-2 cursor-pointer flex items-center rounded-xl transition-all',
                 isDark
                   ? 'bg-neutral-900 text-pink-500 hover:bg-neutral-600'
-                  : 'bg-white text-lime-500 hover:bg-gray-50',
+                  : 'bg-white text-indigo-500 hover:bg-gray-50',
               ]"
             >
               <span class="hidden sm:inline">Избранное</span>
@@ -131,7 +131,7 @@ const { isDark, toggleTheme } = inject('theme')
                 'h-10 sm:h-12 px-3 sm:px-4 text-sm sm:text-base md:text-lg hover:scale-105 duration-300 shadow-lg gap-2 cursor-pointer flex items-center rounded-xl transition-all',
                 isDark
                   ? 'bg-neutral-900 text-pink-500 hover:bg-neutral-600'
-                  : 'bg-white text-lime-500 hover:bg-gray-50',
+                  : 'bg-white text-indigo-500 hover:bg-gray-50',
               ]"
             >
               <span class="hidden sm:inline">Профиль</span>

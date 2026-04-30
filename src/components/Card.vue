@@ -33,7 +33,11 @@ const goToProduct = () => {
     if (cleanCategory.includes('проц')) {
       catFolder = 'cpu'
     } else if (cleanCategory.includes('видеокар')) {
-      catFolder = 'gpu' // или 'videocards', в зависимости от вашего API
+      catFolder = 'gpu'
+    } else if (cleanCategory.includes('озу')) {
+      catFolder = 'memory_ozu'
+    } else if (cleanCategory.includes('накопител')) {
+      catFolder = 'memory'
     } else {
       catFolder = 'motherboard'
     }
@@ -46,32 +50,36 @@ const goToProduct = () => {
 </script>
 
 <template>
-  <div class="group p-2">
+  <div class="group p-1">
     <div
       @click="goToProduct"
       :class="[
-        'relative rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 cursor-pointer shadow-xl transition-all duration-300 ease-in-out transform',
+        'relative rounded-md sm:rounded-md p-4 sm:p-3 md:p-10 cursor-pointer shadow-xl transition-all duration-300 ease-in-out transform',
         'group-hover:-translate-y-2 group-hover:shadow-2xl border-1',
         'will-change-transform backface-hidden',
-        isDark ? 'bg-neutral-800 border-pink-600/20' : 'bg-white border-lime-600/20',
+        isDark ? 'bg-neutral-800 border-pink-600/20' : 'bg-white border-indigo-600/20',
       ]"
     >
-      <div v-if="props.onClickFavorite" @click.stop="props.onClickFavorite()" class="absolute z-10">
+      <div
+        v-if="props.onClickFavorite"
+        @click.stop="props.onClickFavorite()"
+        class="absolute top-5 left-5 z-10"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
           :class="[
-            'w-7 h-7 sm:w-9 sm:h-9 cursor-pointer duration-300 transition-all',
+            'w-7 h-7 sm:w-8 sm:h-8 cursor-pointer duration-300 transition-all',
             isFavorite ? 'fill-current' : 'fill-none',
             isDark
               ? isFavorite
                 ? 'text-pink-500'
                 : 'text-neutral-400 hover:text-pink-500'
               : isFavorite
-                ? 'text-lime-500'
-                : 'text-neutral-400 hover:text-lime-500',
+                ? 'text-indigo-500'
+                : 'text-neutral-400 hover:text-indigo-500',
           ]"
         >
           <path
@@ -92,7 +100,7 @@ const goToProduct = () => {
       <p
         :class="[
           'text-base sm:text-lg md:text-xl font-semibold mt-3 sm:mt-4 transition-colors line-clamp-2 min-h-[2.5em]',
-          isDark ? 'text-pink-500' : 'text-lime-500',
+          isDark ? 'text-pink-500' : 'text-indigo-600',
         ]"
       >
         {{ title }}
@@ -130,8 +138,8 @@ const goToProduct = () => {
                   ? 'bg-neutral-800 border-1 border-pink-500 text-pink-500 shadow-pink-700/50'
                   : 'bg-neutral-800 border border-neutral-500 text-white hover:border-pink-500 hover:text-pink-500'
                 : isAdded
-                  ? 'bg-white border-1 border-lime-400 text-lime-500 shadow-lime-200/50'
-                  : 'bg-white border border-neutral-200 text-neutral-400 hover:border-lime-500 hover:text-lime-500',
+                  ? 'bg-white border-1 border-indigo-400 text-indigo-500 shadow-indigo-200/50'
+                  : 'bg-white border border-neutral-200 text-neutral-400 hover:border-indigo-500 hover:text-indigo-500',
             ]"
           >
             <path

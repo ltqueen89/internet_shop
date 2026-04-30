@@ -17,7 +17,7 @@ body.dark-theme {
 /* ---- Firefox ---- */
 html {
   scrollbar-width: thin;
-  scrollbar-color: #84cc16 transparent;
+  scrollbar-color: #6366f1 transparent;
 }
 html:has(body.dark-theme) {
   scrollbar-color: #db2777 transparent;
@@ -38,7 +38,7 @@ body::-webkit-scrollbar-track {
 }
 html::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
-  background: #84cc16;
+  background: #6366f1;
   border-radius: 20px;
 }
 body.dark-theme::-webkit-scrollbar-thumb,
@@ -61,7 +61,7 @@ body.dark-theme *::-webkit-scrollbar-track {
   background: transparent;
 }
 body.light-theme *::-webkit-scrollbar-thumb {
-  background: #84cc16;
+  background: #6366f1;
   border-radius: 20px;
 }
 body.dark-theme *::-webkit-scrollbar-thumb {
@@ -73,7 +73,7 @@ body.dark-theme *::-webkit-scrollbar-thumb:hover {
   filter: brightness(1.2);
 }
 body.light-theme * {
-  scrollbar-color: #84cc16 transparent;
+  scrollbar-color: #6366f1 transparent;
   scrollbar-width: thin;
 }
 body.dark-theme * {
@@ -99,7 +99,7 @@ body.dark-theme * {
   background: #db2777;
 }
 .scrollbar-light::-webkit-scrollbar-thumb {
-  background: #84cc16;
+  background: #6366f1;
 }
 .scrollbar-dark {
   scrollbar-width: thin;
@@ -107,5 +107,5 @@ body.dark-theme * {
 }
 .scrollbar-light {
   scrollbar-width: thin;
-  scrollbar-color: #84cc16 transparent;
+  scrollbar-color: #6366f1 transparent;
 }

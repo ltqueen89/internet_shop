@@ -12,7 +12,7 @@ const { closeDrawer } = inject('cart')
       fill="none"
       @click="closeDrawer"
       class="size-6"
-      :class="['hover:scale-105 ', isDark ? 'stroke-pink-500' : 'stroke-lime-500']"
+      :class="['hover:scale-105 ', isDark ? 'stroke-pink-500' : 'stroke-indigo-500']"
     >
       <path
         fill-rule="evenodd"

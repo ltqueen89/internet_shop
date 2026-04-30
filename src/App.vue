@@ -126,12 +126,7 @@ provide('cart', {
 </script>
 
 <template>
-  <div
-    :class="[
-      'min-h-screen transition-colors duration-400',
-      isDark ? 'bg-neutral-900' : 'bg-neutral-200',
-    ]"
-  >
+  <div :class="[' transition-colors duration-400', isDark ? 'bg-neutral-900' : 'bg-neutral-200']">
     <Headerr v-if="isHeaderVisible" @open-drawer="openDrawer" />
 
     <div>
@@ -160,5 +155,63 @@ provide('cart', {
 .cart-anim-leave-to {
   opacity: 0;
   transform: translateX(20px);
+}
+
+/* Global scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb,
+.dark-theme::-webkit-scrollbar-thumb {
+  background: #db2777;
+  border-radius: 20px;
+}
+.light-theme ::-webkit-scrollbar-thumb,
+.light-theme::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.2);
+}
+
+.dark-theme {
+  scrollbar-width: thin;
+  scrollbar-color: #db2777 transparent;
+}
+.light-theme {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 transparent;
+}
+
+/* Scoped scrollbar classes for components */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-dark::-webkit-scrollbar-thumb {
+  background: #db2777;
+  border-radius: 20px;
+}
+.scrollbar-light::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 20px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.2);
+}
+.scrollbar-dark {
+  scrollbar-width: thin;
+  scrollbar-color: #db2777 transparent;
+}
+.scrollbar-light {
+  scrollbar-width: thin;
+  scrollbar-color: #6366f1 transparent;
 }
 </style>

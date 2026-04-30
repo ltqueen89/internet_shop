@@ -80,7 +80,7 @@ watch(
     class="flex flex-col md:flex-row text-2xl justify-between items-center pt-8 px-10 gap-4"
     :class="[
       'text-3xl font-bold uppercase transition-colors',
-      isDark ? 'text-pink-600' : 'text-lime-500',
+      isDark ? 'text-pink-500' : 'text-indigo-500',
     ]"
   >
     Избранное

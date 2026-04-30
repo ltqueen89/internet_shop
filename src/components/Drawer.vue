@@ -59,7 +59,7 @@ defineProps({
                   isDark ? 'border-gray-700' : 'border-gray-200',
                 ]"
               ></div>
-              <b :class="['text-xl font-bold', isDark ? 'text-pink-500' : 'text-lime-600']">
+              <b :class="['text-xl font-bold', isDark ? 'text-pink-500' : 'text-indigo-600']">
                 {{ (totalPrice ?? 0).toLocaleString() }} ₽
               </b>
             </div>
@@ -71,7 +71,7 @@ defineProps({
                 'w-full py-4 rounded-2xl text-lg font-bold transition-all active:scale-95 disabled:bg-slate-400 disabled:cursor-not-allowed',
                 isDark
                   ? 'bg-pink-500 hover:bg-pink-600 text-white shadow-lg shadow-pink-500/20'
-                  : 'bg-lime-500 hover:bg-lime-600 text-white shadow-lg shadow-lime-500/20',
+                  : 'bg-indigo-500 hover:bg-indigo-600 text-white shadow-lg shadow-indigo-500/20',
               ]"
             >
               Оформить заказ

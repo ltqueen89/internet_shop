@@ -1,9 +1,10 @@
 <template>
-  <div class="px-3 sm:px-4">
+  <div class="px-3 min-h-206 sm:px-4">
     <button
       type="button"
       @click="$router.back()"
       class="mb-4 sm:mb-6 pt-3 sm:pt-[15px] pl-1 sm:pl-[15px] flex items-center gap-2 opacity-60 hover:opacity-100 transition-opacity"
+      :class="['', isDark ? 'text-neutral-200' : 'text-neutral-600']"
       aria-label="Назад к списку"
     >
       <span>←</span> Назад к списку
@@ -59,7 +60,7 @@
               <p
                 :class="[
                   'text-2xl sm:text-3xl flex items-center mb-2 sm:mb-8',
-                  isDark ? 'text-pink-500' : 'text-lime-600',
+                  isDark ? 'text-pink-500' : 'text-indigo-600',
                 ]"
               >
                 {{ formattedPrice }}
@@ -72,8 +73,9 @@
                 :class="[
                   'w-full sm:w-60 py-4 sm:py-6 font-black rounded-2xl shadow-lg transform active:scale-95 transition-all uppercase tracking-widest text-sm sm:text-base',
                   isActive
-                    ? 'bg-neutral-200/20 text-black hover:bg-neutral-300/20'
-                    : 'bg-pink-500 text-white',
+                    ? '!bg-neutral-200/20 text-black hover:bg-neutral-300/20'
+                    : ' text-white',
+                  isDark ? 'bg-pink-500' : 'bg-indigo-600',
                 ]"
               >
                 {{ isActive ? 'Добавлено' : 'Добавить' }}
@@ -206,6 +208,30 @@ const fetchProduct = async () => {
           },
           { label: 'Длина', value: (data as any).length ? `${(data as any).length} мм` : '—' },
           { label: 'Цвет', value: (data as any).color || 'Н/Д' },
+        ]
+      } else if (category === 'memory_ozu') {
+        const d = data as any
+        const modules = d.modules ? `${d.modules[0]}x${d.modules[1]} ГБ` : 'Н/Д'
+        const speed = d.speed ? `DDR${d.speed[0]} ${d.speed[1]} МГц` : 'Н/Д'
+        fetchedProduct.specs = [
+          { label: 'Скорость', value: speed },
+          { label: 'Модули', value: modules },
+          { label: 'CAS Latency', value: d.cas_latency ?? 'Н/Д' },
+          {
+            label: 'First Word Latency',
+            value: d.first_word_latency ? `${d.first_word_latency} нс` : 'Н/Д',
+          },
+          { label: 'Цвет', value: d.color || 'Н/Д' },
+        ]
+      } else if (category === 'memory') {
+        const d = data as any
+        fetchedProduct.specs = [
+          { label: 'Ёмкость', value: d.capacity ? `${d.capacity} ГБ` : 'Н/Д' },
+          { label: 'Тип', value: d.type || 'Н/Д' },
+          { label: 'Форм-фактор', value: d.form_factor || 'Н/Д' },
+          { label: 'Интерфейс', value: d.interface || 'Н/Д' },
+          { label: 'Кэш', value: d.cache ? `${d.cache} МБ` : 'Н/Д' },
+          { label: 'Цена за ГБ', value: d.price_per_gb ? `${d.price_per_gb} руб.` : 'Н/Д' },
         ]
       }
     }

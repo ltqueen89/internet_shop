@@ -1,7 +1,7 @@
 <template>
   <div
     :class="[
-      'min-h-screen p-4 sm:p-6 md:p-8 pt-20 sm:pt-28 md:pt-40 flex flex-col items-center transition-colors duration-400',
+      'min-h-200 max-h-300 p-4 sm:p-6 md:p-8 pt-10 sm:pt-10 md:pt-10 flex flex-col items-center transition-colors duration-400',
       isDark ? 'bg-neutral-900' : 'bg-neutral-200',
     ]"
   >
@@ -12,7 +12,7 @@
         to="/"
         :class="[
           'p-3 rounded-full transition-all hover:scale-110 shadow-lg',
-          isDark ? 'bg-neutral-800 text-pink-600' : 'bg-white text-lime-500',
+          isDark ? 'bg-neutral-800 text-pink-600' : 'bg-white text-indigo-500',
         ]"
       >
         <svg
@@ -43,7 +43,7 @@
     <div
       :class="[
         'w-full max-w-5xl p-4 sm:p-6 md:p-10 rounded-xl shadow-2xl transition-colors duration-300 border-2',
-        isDark ? 'bg-neutral-800 border-pink-600' : 'bg-white border-lime-500',
+        isDark ? 'bg-neutral-800 border-pink-600' : 'bg-white border-indigo-500',
       ]"
     >
       <div
@@ -64,7 +64,7 @@
               'w-32 h-32 md:w-40 md:h-40 rounded-xl flex items-center justify-center border-2 shadow-inner cursor-pointer overflow-hidden group relative transition-transform hover:scale-[1.02]',
               isDark
                 ? 'bg-neutral-900 border-pink-600 text-pink-600'
-                : 'bg-neutral-100 border-lime-500 text-lime-600',
+                : 'bg-neutral-100 border-indigo-500 text-indigo-600',
             ]"
           >
             <img v-if="userPhoto" :src="userPhoto" class="w-full h-full object-cover" />
@@ -104,7 +104,7 @@
           <h2
             :class="[
               'text-2xl font-bold border-b-2 pb-2',
-              isDark ? 'text-white border-pink-600' : 'text-gray-800 border-lime-500',
+              isDark ? 'text-white border-pink-600' : 'text-gray-800 border-indigo-500',
             ]"
           >
             Личные данные
@@ -120,7 +120,7 @@
                   'px-4 py-3 text-lg border-2 rounded-xl shadow-inner font-medium truncate flex justify-between items-center',
                   isDark
                     ? 'bg-neutral-900 border-pink-600 text-white'
-                    : 'bg-gray-50 border-lime-500 text-gray-800',
+                    : 'bg-gray-50 border-indigo-500 text-gray-800',
                 ]"
               >
                 {{ userEmail || 'email@example.com' }}
@@ -134,7 +134,7 @@
                       verificationSent
                         ? 'opacity-50 cursor-default'
                         : 'hover:underline cursor-pointer',
-                      isDark ? 'text-pink-400' : 'text-lime-600',
+                      isDark ? 'text-pink-400' : 'text-indigo-600',
                     ]"
                   >
                     {{ verificationSent ? 'Письмо отправлено' : 'Подтвердить' }}
@@ -165,7 +165,7 @@
                   'px-4 py-3 text-lg border-2 rounded-xl shadow-inner font-medium',
                   isDark
                     ? 'bg-neutral-900 border-pink-600 text-white'
-                    : 'bg-gray-50 border-lime-500 text-gray-800',
+                    : 'bg-gray-50 border-indigo-500 text-gray-800',
                 ]"
               >
                 {{ registrationDate || 'Загрузка...' }}
@@ -181,20 +181,20 @@
                   'px-4 py-3 text-lg border-2 rounded-xl shadow-inner font-bold flex items-center gap-2',
                   isDark
                     ? 'bg-neutral-900 border-pink-600 text-gray-300'
-                    : 'bg-gray-50 border-lime-500 text-gray-600',
+                    : 'bg-gray-50 border-indigo-500 text-gray-600',
                 ]"
               >
                 <span class="relative flex h-3 w-3">
                   <span
                     :class="[
                       'animate-ping absolute inline-flex h-full w-full rounded-full opacity-75',
-                      isDark ? 'bg-pink-500' : 'bg-lime-500',
+                      isDark ? 'bg-pink-500' : 'bg-indigo-500',
                     ]"
                   ></span>
                   <span
                     :class="[
                       'relative inline-flex rounded-full h-3 w-3',
-                      isDark ? 'bg-pink-500' : 'bg-lime-500',
+                      isDark ? 'bg-pink-500' : 'bg-indigo-500',
                     ]"
                   ></span>
                 </span>
@@ -206,7 +206,7 @@
           <h2
             :class="[
               'text-2xl font-bold border-b-2 pb-2 mt-10',
-              isDark ? 'text-white border-pink-600' : 'text-gray-800 border-lime-500',
+              isDark ? 'text-white border-pink-600' : 'text-gray-800 border-indigo-500',
             ]"
           >
             История заказов
@@ -252,7 +252,7 @@
               <div class="flex items-center gap-4">
                 <div class="text-right">
                   <p class="text-sm opacity-60">Сумма</p>
-                  <p :class="['text-xl font-black', isDark ? 'text-pink-500' : 'text-lime-600']">
+                  <p :class="['text-xl font-black', isDark ? 'text-pink-500' : 'text-indigo-600']">
                     {{ (order.totalPrice ?? 0).toLocaleString() }} ₽
                   </p>
                 </div>
@@ -273,7 +273,7 @@
           <h2
             :class="[
               'text-2xl font-bold border-b-2 ',
-              isDark ? 'text-white border-pink-600' : 'text-gray-800 border-lime-500',
+              isDark ? 'text-white border-pink-600' : 'text-gray-800 border-indigo-500',
             ]"
           ></h2>
 
@@ -283,7 +283,7 @@
                 'px-6 py-3 font-bold rounded-xl transition-all duration-300 shadow-lg hover:scale-105 flex items-center gap-2',
                 isDark
                   ? 'bg-pink-500 hover:bg-pink-600 text-white'
-                  : 'bg-lime-500 hover:bg-lime-600 text-white',
+                  : 'bg-indigo-500 hover:bg-indigo-600 text-white',
               ]"
             >
               Настройки
@@ -467,7 +467,7 @@ onBeforeUnmount(() => {
   border-radius: 20px;
 }
 .scrollbar-light::-webkit-scrollbar-thumb {
-  background: #84cc16;
+  background: #6366f1;
   border-radius: 20px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
@@ -480,6 +480,6 @@ onBeforeUnmount(() => {
 }
 .scrollbar-light {
   scrollbar-width: thin;
-  scrollbar-color: #84cc16 transparent;
+  scrollbar-color: #6366f1 transparent;
 }
 </style>

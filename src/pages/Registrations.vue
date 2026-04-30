@@ -8,7 +8,7 @@
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          :class="['h-14 sm:h-20 duration-400', isDark ? 'stroke-pink-500' : 'stroke-lime-500']"
+          :class="['h-14 sm:h-20 duration-400', isDark ? 'stroke-pink-500' : 'stroke-indigo-500']"
         >
           <path
             stroke-linecap="round"
@@ -21,7 +21,7 @@
       <div
         :class="[
           'w-full max-w-[440px] p-4 border-3 rounded-md sm:p-6 sm:rounded-lg transition-colors duration-300',
-          isDark ? 'border-pink-700 bg-pink-600' : 'border-lime-500 bg-lime-600',
+          isDark ? 'border-pink-700 bg-pink-600' : 'border-indigo-400 bg-indigo-500',
         ]"
       >
         <h2 class="text-white text-2xl font-bold mb-4 text-center">
@@ -30,7 +30,7 @@
 
         <form @submit.prevent="handleSubmit" class="flex flex-col gap-y-4 sm:gap-y-6">
           <div class="flex flex-col gap-y-1">
-            <label for="email" class="text-sm !font-semibold text-white sm:text-base">Email</label>
+            <label for="email" class="text-sm !font-semibold sm:text-base">Email</label>
             <input
               v-model="email"
               placeholder="Ivanivanov@gmail.com"
@@ -38,18 +38,16 @@
               id="email"
               required
               :class="[
-                'px-4 py-2 text-sm border-2 rounded-md shadow-sm sm:text-base sm:rounded-lg transition-colors duration-300',
+                'px-4 py-2 text-sm border-2 rounded-md text-neutral-600 shadow-sm sm:text-base sm:rounded-lg transition-colors duration-300',
                 isDark
-                  ? 'border-pink-700 bg-pink-800 text-white placeholder:text-gray-400'
-                  : 'border-lime-500 bg-white placeholder:text-gray-400',
+                  ? 'border-pink-700 bg-pink-800 text-white focus:border-pink-800 focus:outline focus:outline-pink-800 placeholder:text-gray-400'
+                  : 'border-indigo-400 bg-white focus:border-indigo-800 focus:outline focus:outline-indigo-800 placeholder:text-gray-400',
               ]"
             />
           </div>
 
           <div class="flex flex-col gap-y-1">
-            <label for="password" class="text-sm !font-semibold text-white sm:text-base"
-              >Password</label
-            >
+            <label for="password" class="text-sm !font-semibold sm:text-base">Password</label>
             <input
               v-model="password"
               placeholder="Password"
@@ -57,19 +55,16 @@
               id="password"
               required
               :class="[
-                'px-4 py-2 text-sm border-2 rounded-md shadow-sm sm:text-base sm:rounded-lg transition-colors duration-300',
+                'px-4 py-2 text-sm border-2 rounded-md text-neutral-600 shadow-sm sm:text-base sm:rounded-lg transition-colors duration-300',
                 isDark
-                  ? 'border-pink-700 bg-pink-800 text-white placeholder:text-gray-400'
-                  : 'border-lime-500 bg-white placeholder:text-gray-400',
+                  ? 'border-pink-700 bg-pink-800 text-white focus:border-pink-800 focus:outline focus:outline-pink-800 placeholder:text-gray-400'
+                  : 'border-indigo-400 bg-white focus:border-indigo-800 focus:outline focus:outline-indigo-800 placeholder:text-gray-400',
               ]"
             />
           </div>
 
           <div v-if="!isLogin" class="flex flex-col gap-y-1">
-            <label
-              for="passwordConfirmation"
-              class="text-sm !font-semibold text-white sm:text-base"
-            >
+            <label for="passwordConfirmation" class="text-sm !font-semibold sm:text-base">
               Password Confirmation
             </label>
             <input
@@ -79,10 +74,10 @@
               id="passwordConfirmation"
               required
               :class="[
-                'px-4 py-2 text-sm border-2 rounded-md shadow-sm sm:text-base sm:rounded-lg transition-colors duration-300',
+                'px-4 py-2 text-sm border-2 rounded-md text-neutral-600 shadow-sm sm:text-base sm:rounded-lg transition-colors duration-300',
                 isDark
-                  ? 'border-pink-700 bg-pink-800 text-white placeholder:text-gray-400'
-                  : 'border-lime-500 bg-white placeholder:text-gray-400',
+                  ? 'border-pink-700 bg-pink-800 text-white focus:border-pink-800 focus:outline focus:outline-pink-800 placeholder:text-gray-400'
+                  : 'border-indigo-400 bg-white focus:border-indigo-800 focus:outline focus:outline-indigo-800 placeholder:text-gray-400',
               ]"
             />
           </div>
@@ -99,7 +94,7 @@
             :disabled="loading"
             :class="[
               'px-6 py-2 mt-2 text-sm !font-semibold rounded-md text-indigo-50 transition-all duration-300 sm:mt-1 sm:text-base sm:rounded-lg',
-              isDark ? 'bg-pink-500 hover:bg-pink-700' : 'bg-lime-500 hover:bg-lime-700',
+              isDark ? 'bg-pink-700 hover:bg-pink-800' : 'bg-indigo-600 hover:bg-indigo-700',
               loading ? 'opacity-50 cursor-not-allowed' : '',
             ]"
           >

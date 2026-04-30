@@ -5,11 +5,11 @@ from ddgs import DDGS
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-JSON_INPUT = os.path.join(BASE_DIR, 'mother.json')
-JSON_OUTPUT = os.path.join(BASE_DIR, 'mother_with_images.json')
+JSON_INPUT = os.path.join(BASE_DIR, 'internal-hard-drive.json')
+JSON_OUTPUT = os.path.join(BASE_DIR, 'internal-hard-drive_with_images.json')
 
 NAME_FIELD = 'name'
-QUERY_SUFFIX = 'reference motherboard'
+QUERY_SUFFIX = 'reference storage device'
 SKIP_IF_EXISTS = False # ЛУЧШЕ ВКЛЮЧИТЬ, чтобы не запрашивать заново то, что уже нашли
 MAX_RESULTS = 1
 

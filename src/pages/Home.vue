@@ -22,6 +22,8 @@ const endpoints = {
   Процессоры: 'https://d34e000f87467eb3.mokky.dev/cpu',
   Платы: 'https://d34e000f87467eb3.mokky.dev/motherboard',
   Видеокарты: 'https://d34e000f87467eb3.mokky.dev/gpu',
+  ОЗУ: 'https://d34e000f87467eb3.mokky.dev/memory_ozu',
+  Накопители: 'https://d34e000f87467eb3.mokky.dev/memory',
 }
 
 const paginatedItems = computed(() => {
@@ -193,7 +195,7 @@ watch(filters, debouncedFetchItems)
     <h2
       :class="[
         'text-2xl sm:text-3xl font-bold uppercase transition-colors text-center md:text-left',
-        isDark ? 'text-pink-600' : 'text-lime-600',
+        isDark ? 'text-pink-500' : 'text-indigo-600',
       ]"
     >
       {{ filters.category ? filters.category : 'Все комплектующие' }}
@@ -207,10 +209,10 @@ watch(filters, debouncedFetchItems)
           filters.category === ''
             ? isDark
               ? 'bg-pink-600 text-white'
-              : 'bg-lime-500 text-white'
+              : 'bg-indigo-500 text-white'
             : isDark
               ? 'bg-neutral-800 text-pink-500 '
-              : 'bg-lime-300 text-white',
+              : 'bg-indigo-100 text-indigo-600',
         ]"
       >
         Все
@@ -234,10 +236,10 @@ watch(filters, debouncedFetchItems)
           filters.category === cat
             ? isDark
               ? 'bg-pink-600 text-white'
-              : 'bg-lime-500 text-white'
+              : 'bg-indigo-500 text-white'
             : isDark
               ? 'bg-neutral-800 text-pink-500'
-              : 'bg-lime-300 text-white',
+              : 'bg-indigo-100 text-indigo-600',
         ]"
       >
         {{ cat }}
@@ -252,7 +254,7 @@ watch(filters, debouncedFetchItems)
           'border-1 font-semibold rounded-xl py-2 px-4 outline-none transition-all duration-300 w-full sm:w-auto',
           isDark
             ? 'bg-neutral-800 border-pink-700 text-pink-500 focus:border-pink-500'
-            : 'bg-white border-lime-400 text-lime-600 focus:border-lime-500',
+            : 'bg-white border-indigo-300 text-indigo-600 focus:border-indigo-500',
         ]"
       >
         <option value="name">По названию</option>
@@ -262,7 +264,7 @@ watch(filters, debouncedFetchItems)
 
       <div class="relative w-full">
         <svg
-          :class="['h-11 w-8 pl-3 absolute z-10', isDark ? 'stroke-pink-500' : 'stroke-lime-500']"
+          :class="['h-11 w-8 pl-3 absolute z-10', isDark ? 'stroke-pink-500' : 'stroke-indigo-500']"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -285,7 +287,7 @@ watch(filters, debouncedFetchItems)
             'border-1 rounded-xl py-2 pl-10 pr-4  outline-none font-semibold transition-all duration-300 w-full',
             isDark
               ? 'bg-neutral-800 border-pink-700 text-white placeholder-gray-500 focus:border-pink-500'
-              : 'bg-white border-lime-400 text-gray-700 placeholder-gray-400 focus:border-lime-500',
+              : 'bg-white border-indigo-300 text-gray-700 placeholder-gray-400 focus:border-indigo-500',
           ]"
         />
       </div>
@@ -307,7 +309,7 @@ watch(filters, debouncedFetchItems)
           'px-4 py-2 rounded-xl font-bold transition-all',
           isDark
             ? 'bg-neutral-800 text-pink-500 disabled:opacity-30'
-            : 'bg-lime-200 text-lime-700 disabled:opacity-50',
+            : 'bg-indigo-100 text-indigo-700 disabled:opacity-50',
         ]"
       >
         Назад
@@ -324,7 +326,7 @@ watch(filters, debouncedFetchItems)
           'px-4 py-2 rounded-xl font-bold transition-all',
           isDark
             ? 'bg-neutral-800 text-pink-500 disabled:opacity-30'
-            : 'bg-lime-200 text-lime-700 disabled:opacity-50',
+            : 'bg-indigo-100 text-indigo-700 disabled:opacity-50',
         ]"
       >
         Вперед
