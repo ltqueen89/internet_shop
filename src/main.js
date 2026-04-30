@@ -13,7 +13,7 @@ import { getFirestore } from 'firebase/firestore'
 import CardInfo from './components/CardInfo.vue'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCEC0FepihNhfvnNLpIe1CCD7OLEhD9dBs',
+  apiKey: import.meta.env.VITE_GOOGLE_API_KEY,
   authDomain: 'authqueenpc.firebaseapp.com',
   projectId: 'authqueenpc',
   storageBucket: 'authqueenpc.firebasestorage.app',
